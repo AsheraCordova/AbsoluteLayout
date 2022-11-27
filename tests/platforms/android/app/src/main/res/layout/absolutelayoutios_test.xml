@@ -1,0 +1,107 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           
+			<!-- start body -->
+		            <TextView
+		                style="@style/blackBg"
+		                android:background="#000"		                
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+android:visibility="visible"		                android:text="layout_x"
+		                onClick="onClicklayout_x"></TextView>
+
+
+		            <AbsoluteLayout
+android:visibility="visible"	            		widget-override="AbsoluteLayout"
+		            	android:id="@+id/layout_x0"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+
+
+><TextView
+android:layout_x="10dp"
+android:id="@+id/text0"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Test 10dp"></TextView>
+<TextView
+android:layout_x="10dp"
+android:id="@+id/text1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Test 10dp"></TextView></AbsoluteLayout>
+    
+		            <TextView
+		                style="@style/blackBg"
+		                android:background="#000"		                
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+android:visibility="visible"		                android:text="layout_y"
+		                onClick="onClicklayout_y"></TextView>
+
+
+		            <AbsoluteLayout
+android:visibility="visible"	            		widget-override="AbsoluteLayout"
+		            	android:id="@+id/layout_y0"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+
+
+><TextView
+android:layout_y="10dp"
+android:id="@+id/text0"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Test 10dp"></TextView>
+<TextView
+android:layout_y="10dp"
+android:id="@+id/text1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Test 10dp"></TextView></AbsoluteLayout>
+    
+			<TextView
+			    	android:id="@+id/testSetAndGetTest"
+	                style="@style/blackBg"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Test Set and Get Test"></TextView>
+
+
+			<AbsoluteLayout
+	            	widget-override="AbsoluteLayout"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/sampleWidget"><TextView
+android:id="@+id/text0"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Test "></TextView>
+<TextView
+android:id="@+id/text1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Test "></TextView></AbsoluteLayout>
+    
+	         <Button android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Start" android:onClick="testGetAndSet"></Button>
+	         
+	           <!-- body end -->
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
+

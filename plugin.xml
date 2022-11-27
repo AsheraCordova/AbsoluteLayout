@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.absolutelayout"
+        version="1.0">
+
+  <name>CordovaAbsoluteLayoutPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaAbsoluteLayoutPlugin">
+        <param name="android-package" value="com.ashera.absolutelayout.CordovaAbsoluteLayoutPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="android/src/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="android/src/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="android/src/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="android/src/test/java/readme.txt" target-dir="src/test/java"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="android/tsc/src/android/widget/AbsoluteLayoutImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="CordovaAbsoluteLayoutPlugin">
+        <param name="android-package" value="com.ashera.absolutelayout.CordovaAbsoluteLayoutPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="browser/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
+     <source-file src="browser/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
+     <source-file src="browser/src/main/java/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
+     <source-file src="browser/src/main/java/r/android/widget/AbsoluteLayout.java" target-dir="src/main/java/r/android/widget"/>
+     <source-file src="browser/src/test/java/readme.txt" target-dir="src/test/java"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="browser/tsc/src/web/widget/AbsoluteLayoutImpl.ts" target-dir="tsc/src/web/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaAbsoluteLayoutPlugin">
+        	<param name="ios-package" value="CordovaAbsoluteLayoutPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/AbsoluteLayout.h" target-dir="ios/src"/>
+     <source-file src="ios/ios/src/AbsoluteLayout.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/AbsoluteLayoutImpl.h" target-dir="ios/src"/>
+     <source-file src="ios/ios/src/AbsoluteLayoutImpl.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/AbsoluteLayoutPlugin.h" target-dir="ios/src"/>
+     <source-file src="ios/ios/src/AbsoluteLayoutPlugin.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaAbsoluteLayout.h" target-dir="ios/src"/>
+     <source-file src="ios/ios/src/CordovaAbsoluteLayout.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="ios/tsc/src/ios/widget/AbsoluteLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="swt">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaAbsoluteLayoutPlugin">
+        <param name="android-package" value="com.ashera.absolutelayout.CordovaAbsoluteLayoutPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="swt/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
+     <source-file src="swt/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
+     <source-file src="swt/src/main/java/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
+     <source-file src="swt/src/main/java/r/android/widget/AbsoluteLayout.java" target-dir="src/main/java/r/android/widget"/>
+     <source-file src="swt/src/test/java/readme.txt" target-dir="src/test/java"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="swt/tsc/src/swt/widget/AbsoluteLayoutImpl.ts" target-dir="tsc/src/swt/widget"/>
+     <!-- tsc end -->
+  </platform>
+
+
+
+
+
+</plugin>
