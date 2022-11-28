@@ -21,7 +21,6 @@
      <source-file src="android/src/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/com/ashera/absolutelayout"/>
      <source-file src="android/src/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
      <source-file src="android/src/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
-     <source-file src="android/src/test/java/readme.txt" target-dir="src/test/java"/>
      <!-- src end -->
      <!-- start res -->
 
