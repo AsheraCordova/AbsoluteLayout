@@ -1,4 +1,4 @@
-#import "CordovaAbsoluteLayout.h"
+#import "CordovaAbsoluteLayoutPlugin.h"
 #import "AbsoluteLayoutPlugin.h"
 
 @implementation CordovaAbsoluteLayoutPlugin
