@@ -16,15 +16,15 @@
 			<!-- start body -->
 		            <TextView
 		                style="@style/blackBg"
-		                android:background="#000"		                
+		                android:background="#90EE90"		                
 		                android:layout_width="match_parent"
 		                android:layout_height="wrap_content"
-android:visibility="visible"		                android:text="layout_x"
+android:visibility="gone"		                android:text="layout_x"
 		                onClick="onClicklayout_x"></TextView>
 
 
 		            <AbsoluteLayout
-android:visibility="visible"	            		widget-override="AbsoluteLayout"
+android:visibility="gone"	            		widget-override="AbsoluteLayout"
 		            	android:id="@+id/layout_x0"
 		                android:layout_width="match_parent"
 		                android:layout_height="wrap_content"
@@ -45,15 +45,15 @@ android:text="Test 10dp"></TextView></AbsoluteLayout>
     
 		            <TextView
 		                style="@style/blackBg"
-		                android:background="#000"		                
+		                android:background="#90EE90"		                
 		                android:layout_width="match_parent"
 		                android:layout_height="wrap_content"
-android:visibility="visible"		                android:text="layout_y"
+android:visibility="gone"		                android:text="layout_y"
 		                onClick="onClicklayout_y"></TextView>
 
 
 		            <AbsoluteLayout
-android:visibility="visible"	            		widget-override="AbsoluteLayout"
+android:visibility="gone"	            		widget-override="AbsoluteLayout"
 		            	android:id="@+id/layout_y0"
 		                android:layout_width="match_parent"
 		                android:layout_height="wrap_content"
