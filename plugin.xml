@@ -66,8 +66,8 @@
      <source-file src="ios/ios/src/AbsoluteLayoutImpl.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
      <header-file src="ios/ios/src/AbsoluteLayoutPlugin.h" target-dir="ios/src"/>
      <source-file src="ios/ios/src/AbsoluteLayoutPlugin.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
-     <header-file src="ios/ios/src/CordovaAbsoluteLayout.h" target-dir="ios/src"/>
-     <source-file src="ios/ios/src/CordovaAbsoluteLayout.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaAbsoluteLayoutPlugin.h" target-dir="ios/src"/>
+     <source-file src="ios/ios/src/CordovaAbsoluteLayoutPlugin.m" target-dir="ios/src" compiler-flags="-fobjc-arc-exceptions"/>
      <!-- ios end -->
      <!-- start tsc -->
      <source-file src="ios/tsc/src/ios/widget/AbsoluteLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
