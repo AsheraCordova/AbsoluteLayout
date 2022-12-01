@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_AbsoluteLayoutPlugin
 
-#if !defined (ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_) && (INCLUDE_ALL_AbsoluteLayoutPlugin || defined(INCLUDE_ComAsheraAbsolutelayoutAbsoluteLayoutPlugin))
-#define ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_
+#if !defined (ASAbsoluteLayoutPlugin_) && (INCLUDE_ALL_AbsoluteLayoutPlugin || defined(INCLUDE_ASAbsoluteLayoutPlugin))
+#define ASAbsoluteLayoutPlugin_
 
-@interface ComAsheraAbsolutelayoutAbsoluteLayoutPlugin : NSObject
+@interface ASAbsoluteLayoutPlugin : NSObject
 
 #pragma mark Public
 
@@ -26,17 +26,19 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin)
+J2OBJC_EMPTY_STATIC_INIT(ASAbsoluteLayoutPlugin)
 
-FOUNDATION_EXPORT void ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin *self);
+FOUNDATION_EXPORT void ASAbsoluteLayoutPlugin_init(ASAbsoluteLayoutPlugin *self);
 
-FOUNDATION_EXPORT ComAsheraAbsolutelayoutAbsoluteLayoutPlugin *new_ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init(void) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT ASAbsoluteLayoutPlugin *new_ASAbsoluteLayoutPlugin_init(void) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComAsheraAbsolutelayoutAbsoluteLayoutPlugin *create_ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init(void);
+FOUNDATION_EXPORT ASAbsoluteLayoutPlugin *create_ASAbsoluteLayoutPlugin_init(void);
 
-FOUNDATION_EXPORT void ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_initPlugin(void);
+FOUNDATION_EXPORT void ASAbsoluteLayoutPlugin_initPlugin(void);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin)
+J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutPlugin)
+
+@compatibility_alias ComAsheraAbsolutelayoutAbsoluteLayoutPlugin ASAbsoluteLayoutPlugin;
 
 #endif
 

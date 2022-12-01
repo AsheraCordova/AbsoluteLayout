@@ -9,17 +9,17 @@
 #include "WidgetFactory.h"
 
 
-@implementation ComAsheraAbsolutelayoutAbsoluteLayoutPlugin
+@implementation ASAbsoluteLayoutPlugin
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init(self);
+  ASAbsoluteLayoutPlugin_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initPlugin {
-  ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_initPlugin();
+  ASAbsoluteLayoutPlugin_initPlugin();
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -33,27 +33,27 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(initPlugin);
   #pragma clang diagnostic pop
-  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutPlugin = { "AbsoluteLayoutPlugin", "com.ashera.absolutelayout", NULL, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };
-  return &_ComAsheraAbsolutelayoutAbsoluteLayoutPlugin;
+  static const J2ObjcClassInfo _ASAbsoluteLayoutPlugin = { "AbsoluteLayoutPlugin", "com.ashera.absolutelayout", NULL, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };
+  return &_ASAbsoluteLayoutPlugin;
 }
 
 @end
 
-void ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin *self) {
+void ASAbsoluteLayoutPlugin_init(ASAbsoluteLayoutPlugin *self) {
   NSObject_init(self);
 }
 
-ComAsheraAbsolutelayoutAbsoluteLayoutPlugin *new_ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init() {
-  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin, init)
+ASAbsoluteLayoutPlugin *new_ASAbsoluteLayoutPlugin_init() {
+  J2OBJC_NEW_IMPL(ASAbsoluteLayoutPlugin, init)
 }
 
-ComAsheraAbsolutelayoutAbsoluteLayoutPlugin *create_ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_init() {
-  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin, init)
+ASAbsoluteLayoutPlugin *create_ASAbsoluteLayoutPlugin_init() {
+  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutPlugin, init)
 }
 
-void ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_initPlugin() {
-  ComAsheraAbsolutelayoutAbsoluteLayoutPlugin_initialize();
-  ASWidgetFactory_register__WithASIWidget_(new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_init());
+void ASAbsoluteLayoutPlugin_initPlugin() {
+  ASAbsoluteLayoutPlugin_initialize();
+  ASWidgetFactory_register__WithASIWidget_(new_ASAbsoluteLayoutImpl_init());
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutPlugin)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutPlugin)

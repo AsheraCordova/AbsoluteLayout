@@ -1,10 +1,10 @@
 #import "CordovaAbsoluteLayout.h"
-#import "AbsoluteLayout.h"
+#import "AbsoluteLayoutPlugin.h"
 
 @implementation CordovaAbsoluteLayout
 + (void)initialize
 {
-    [ASAbsoluteLayout initPlugin];
+    [ASAbsoluteLayoutPlugin initPlugin];
 }
 
 @end
