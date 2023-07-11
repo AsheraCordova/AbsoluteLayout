@@ -58,7 +58,7 @@ public class AbsoluteLayoutImpl extends BaseHasWidgets {
 
 	@Override
 	public IWidget newInstance() {
-		return new AbsoluteLayoutImpl();
+		return new AbsoluteLayoutImpl(groupName, localName);
 	}
 	
 	@SuppressLint("NewApi")
@@ -104,7 +104,7 @@ Context context = (Context) fragment.getRootActivity();
 	}
 
 	@Override
-	public boolean remove(IWidget w) {
+	public boolean remove(IWidget w) {		
 		boolean remove = super.remove(w);
 		absoluteLayout.removeView((View) w.asWidget());
 		return remove;
@@ -248,11 +248,6 @@ return layoutParams.y;			}
 		public AbsoluteLayoutExt(Context context) {
 			super(context);
 			
-			
-			
-			
-			
-			
 		}
 		
 		@Override
@@ -364,12 +359,11 @@ return layoutParams.y;			}
         	ViewImpl.drawableStateChanged(AbsoluteLayoutImpl.this);
         }
 	}
-	
-	public void updateMeasuredDimension(int width, int height) {
-		((AbsoluteLayoutExt) absoluteLayout).updateMeasuredDimension(width, height);
+	@Override
+	public Class getViewClass() {
+		return AbsoluteLayoutExt.class;
 	}
 	
-
 	@SuppressLint("NewApi")
 	@Override
 	public void setAttribute(WidgetAttribute key, String strValue, Object objValue, ILifeCycleDecorator decorator) {

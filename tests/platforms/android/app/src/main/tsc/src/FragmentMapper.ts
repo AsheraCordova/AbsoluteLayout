@@ -132,6 +132,14 @@ import ProgressBarSwtActivity from './ProgressBarSwtActivity';
 import ProgressBarWebActivity from './ProgressBarWebActivity';
 import ProgressBarIosActivity from './ProgressBarIosActivity';
 import UIProgressViewIosActivity from './UIProgressViewIosActivity';
+import PopupWindowAndroidActivity from './PopupWindowAndroidActivity';
+import PopupWindowSwtActivity from './PopupWindowSwtActivity';
+import PopupWindowWebActivity from './PopupWindowWebActivity';
+import PopupWindowIosActivity from './PopupWindowIosActivity';
+import AutoCompleteTextViewAndroidActivity from './AutoCompleteTextViewAndroidActivity';
+import AutoCompleteTextViewSwtActivity from './AutoCompleteTextViewSwtActivity';
+import AutoCompleteTextViewWebActivity from './AutoCompleteTextViewWebActivity';
+import AutoCompleteTextViewIosActivity from './AutoCompleteTextViewIosActivity';
 import AbsoluteLayoutAndroidActivity from './AbsoluteLayoutAndroidActivity';
 import AbsoluteLayoutSwtActivity from './AbsoluteLayoutSwtActivity';
 import AbsoluteLayoutIosActivity from './AbsoluteLayoutIosActivity';
@@ -278,6 +286,14 @@ export const fragmentMapper : any = {
 	'layout/progressbarweb_test.xml': ProgressBarWebActivity,
 	'layout/progressbarios_test.xml': ProgressBarIosActivity,
 	'layout/uiprogressviewios_test.xml': UIProgressViewIosActivity,
+	'layout/popupwindowandroid_test.xml': PopupWindowAndroidActivity,
+	'layout/popupwindowswt_test.xml': PopupWindowSwtActivity,
+	'layout/popupwindowweb_test.xml': PopupWindowWebActivity,
+	'layout/popupwindowios_test.xml': PopupWindowIosActivity,
+	'layout/autocompletetextviewandroid_test.xml': AutoCompleteTextViewAndroidActivity,
+	'layout/autocompletetextviewswt_test.xml': AutoCompleteTextViewSwtActivity,
+	'layout/autocompletetextviewweb_test.xml': AutoCompleteTextViewWebActivity,
+	'layout/autocompletetextviewios_test.xml': AutoCompleteTextViewIosActivity,
 	'layout/absolutelayoutandroid_test.xml': AbsoluteLayoutAndroidActivity,
 	'layout/absolutelayoutswt_test.xml': AbsoluteLayoutSwtActivity,
 	'layout/absolutelayoutios_test.xml': AbsoluteLayoutIosActivity,

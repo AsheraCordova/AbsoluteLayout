@@ -160,6 +160,14 @@ export default class HomeActivity extends Activity{
 				{"id": "ProgressBarWebActivity","name" : "ProgressBarWebActivity"},
 				{"id": "ProgressBarIosActivity","name" : "ProgressBarIosActivity"},
 				{"id": "UIProgressViewIosActivity","name" : "UIProgressViewIosActivity"},
+				{"id": "PopupWindowAndroidActivity","name" : "PopupWindowAndroidActivity"},
+				{"id": "PopupWindowSwtActivity","name" : "PopupWindowSwtActivity"},
+				{"id": "PopupWindowWebActivity","name" : "PopupWindowWebActivity"},
+				{"id": "PopupWindowIosActivity","name" : "PopupWindowIosActivity"},
+				{"id": "AutoCompleteTextViewAndroidActivity","name" : "AutoCompleteTextViewAndroidActivity"},
+				{"id": "AutoCompleteTextViewSwtActivity","name" : "AutoCompleteTextViewSwtActivity"},
+				{"id": "AutoCompleteTextViewWebActivity","name" : "AutoCompleteTextViewWebActivity"},
+				{"id": "AutoCompleteTextViewIosActivity","name" : "AutoCompleteTextViewIosActivity"},
 				{"id": "AbsoluteLayoutAndroidActivity","name" : "AbsoluteLayoutAndroidActivity"},
 				{"id": "AbsoluteLayoutSwtActivity","name" : "AbsoluteLayoutSwtActivity"},
 				{"id": "AbsoluteLayoutIosActivity","name" : "AbsoluteLayoutIosActivity"},
@@ -577,6 +585,30 @@ export default class HomeActivity extends Activity{
     	}	
 		else if (obj.id == 'UIProgressViewIosActivity') {
         	await this.navController.reset().navigate("fragment#framelayout#layout/uiprogressviewios_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'PopupWindowAndroidActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/popupwindowandroid_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'PopupWindowSwtActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/popupwindowswt_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'PopupWindowWebActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/popupwindowweb_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'PopupWindowIosActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/popupwindowios_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'AutoCompleteTextViewAndroidActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/autocompletetextviewandroid_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'AutoCompleteTextViewSwtActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/autocompletetextviewswt_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'AutoCompleteTextViewWebActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/autocompletetextviewweb_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
+    	}	
+		else if (obj.id == 'AutoCompleteTextViewIosActivity') {
+        	await this.navController.reset().navigate("fragment#framelayout#layout/autocompletetextviewios_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
     	}	
 		else if (obj.id == 'AbsoluteLayoutAndroidActivity') {
         	await this.navController.reset().navigate("fragment#framelayout#layout/absolutelayoutandroid_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}}).executeCommand();
