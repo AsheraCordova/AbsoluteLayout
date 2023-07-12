@@ -38,10 +38,10 @@
     </config-file>
 
    	 <!-- start src -->
-     <source-file src="browser/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
-     <source-file src="browser/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
-     <source-file src="browser/src/main/java/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
-     <source-file src="browser/src/main/java/r/android/widget/AbsoluteLayout.java" target-dir="src/main/java/r/android/widget"/>
+     <source-file src="browser/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="browser/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="browser/src/main/java/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="browser/src/main/java/r/android/widget/AbsoluteLayout.java" target-dir="src/r/android/widget"/>
      <source-file src="browser/src/test/java/readme.txt" target-dir="src/test/java"/>
      <!-- src end -->
      <!-- start res -->
@@ -82,10 +82,10 @@
     </config-file>
 
    	 <!-- start src -->
-     <source-file src="swt/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
-     <source-file src="swt/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
-     <source-file src="swt/src/main/java/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/main/java/com/ashera/absolutelayout"/>
-     <source-file src="swt/src/main/java/r/android/widget/AbsoluteLayout.java" target-dir="src/main/java/r/android/widget"/>
+     <source-file src="swt/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutImpl.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="swt/src/main/java/com/ashera/absolutelayout/AbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="swt/src/main/java/com/ashera/absolutelayout/CordovaAbsoluteLayoutPlugin.java" target-dir="src/com/ashera/absolutelayout"/>
+     <source-file src="swt/src/main/java/r/android/widget/AbsoluteLayout.java" target-dir="src/r/android/widget"/>
      <source-file src="swt/src/test/java/readme.txt" target-dir="src/test/java"/>
      <!-- src end -->
      <!-- start res -->
