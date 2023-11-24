@@ -358,6 +358,31 @@ return layoutParams.y;			}
         	super.drawableStateChanged();
         	ViewImpl.drawableStateChanged(AbsoluteLayoutImpl.this);
         }
+        
+        	public void state0() {
+        		ViewImpl.state(AbsoluteLayoutImpl.this, 0);
+        	}
+        	public void state1() {
+        		ViewImpl.state(AbsoluteLayoutImpl.this, 1);
+        	}
+        	public void state2() {
+        		ViewImpl.state(AbsoluteLayoutImpl.this, 2);
+        	}
+        	public void state3() {
+        		ViewImpl.state(AbsoluteLayoutImpl.this, 3);
+        	}
+        	public void state4() {
+        		ViewImpl.state(AbsoluteLayoutImpl.this, 4);
+        	}
+                        
+        public void stateYes() {
+        	ViewImpl.stateYes(AbsoluteLayoutImpl.this);
+        	
+        }
+        
+        public void stateNo() {
+        	ViewImpl.stateNo(AbsoluteLayoutImpl.this);
+        }
 	}
 	@Override
 	public Class getViewClass() {
@@ -411,7 +436,7 @@ return layoutParams.y;			}
 	public void setId(String id){
 		if (id != null && !id.equals("")){
 			super.setId(id);
-			absoluteLayout.setId(IdGenerator.getId(id));
+			absoluteLayout.setId((int) quickConvert(id, "id"));
 		}
 	}
 	
