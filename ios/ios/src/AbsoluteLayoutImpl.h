@@ -25,6 +25,7 @@
 @class ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;
 @class ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;
 @class ASWidgetAttribute;
+@class IOSClass;
 @protocol ASIFragment;
 @protocol ASILifeCycleDecorator;
 @protocol ASIWidget;
@@ -70,6 +71,8 @@
 
 - (id)getPluginWithNSString:(NSString *)plugin;
 
+- (IOSClass *)getViewClass;
+
 - (void)invalidate;
 
 - (void)loadAttributesWithNSString:(NSString *)localName;
@@ -96,8 +99,7 @@
 
 - (void)setIdWithNSString:(NSString *)id_;
 
-- (void)updateMeasuredDimensionWithInt:(jint)width
-                               withInt:(jint)height;
+- (void)setVisibleWithBoolean:(jboolean)b;
 
 @end
 
@@ -152,8 +154,11 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl)
 #define INCLUDE_ASIMaxDimension 1
 #include "IMaxDimension.h"
 
+@class ADRect;
+@class ADView;
 @class ASAbsoluteLayoutImpl;
 @class ASWidgetAttribute;
+@class IOSIntArray;
 @class IOSObjectArray;
 @protocol ASIWidget;
 @protocol JavaUtilList;
@@ -171,11 +176,19 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl)
 
 - (id)getAttributeWithASWidgetAttribute:(ASWidgetAttribute *)widgetAttribute;
 
+- (void)getLocationOnScreenWithIntArray:(IOSIntArray *)appScreenLocation;
+
 - (jint)getMaxHeight;
 
 - (jint)getMaxWidth;
 
 - (id<JavaUtilList>)getMethods;
+
+- (id<ASIWidget>)getWidget;
+
+- (void)getWindowVisibleDisplayFrameWithADRect:(ADRect *)displayFrame;
+
+- (ADView *)inflateViewWithNSString:(NSString *)layout;
 
 - (void)initialized OBJC_METHOD_FAMILY_NONE;
 
@@ -188,6 +201,10 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl)
 - (void)onMeasureWithInt:(jint)widthMeasureSpec
                  withInt:(jint)heightMeasureSpec;
 
+- (void)remeasure;
+
+- (void)removeFromParent;
+
 - (void)setAttributeWithASWidgetAttribute:(ASWidgetAttribute *)widgetAttribute
                              withNSString:(NSString *)strValue
                                    withId:(id)objValue;
@@ -196,7 +213,24 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl)
 
 - (void)setMaxWidthWithInt:(jint)width;
 
+- (void)setMyAttributeWithNSString:(NSString *)name
+                            withId:(id)value;
+
 - (void)setVisibilityWithInt:(jint)visibility;
+
+- (void)state0;
+
+- (void)state1;
+
+- (void)state2;
+
+- (void)state3;
+
+- (void)state4;
+
+- (void)stateNo;
+
+- (void)stateYes;
 
 - (void)updateMeasuredDimensionWithInt:(jint)width
                                withInt:(jint)height;
@@ -296,6 +330,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setCustomErrorMessageValuesWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setDuplicateParentStateWithBoolean:(jboolean)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setElevationWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setEnabledWithBoolean:(jboolean)arg0;
 
@@ -397,6 +433,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setMinWidthWithNSString:(NSString *)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setModelDescPathWithNSString:(NSString *)arg0;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setModelForWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setModelIdPathWithNSString:(NSString *)arg0;
@@ -425,7 +463,11 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnLongClickWithNSString:(NSString *)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnSwipedWithNSString:(NSString *)arg0;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnTouchWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOutsideTouchableWithBoolean:(jboolean)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setPaddingBottomWithNSString:(NSString *)arg0;
 
@@ -600,6 +642,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetMinHeight;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetMinWidth;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetModelDescPath;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetModelIdPath;
 

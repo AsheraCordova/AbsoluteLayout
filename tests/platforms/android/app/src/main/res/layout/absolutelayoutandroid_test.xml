@@ -23,6 +23,7 @@ android:visibility="gone"		                android:text="layout_x"
 		                onClick="onClicklayout_x"></TextView>
 
 
+
 		            <AbsoluteLayout
 android:visibility="gone"	            		widget-override="AbsoluteLayout"
 		            	android:id="@+id/layout_x0"
@@ -52,6 +53,7 @@ android:visibility="gone"		                android:text="layout_y"
 		                onClick="onClicklayout_y"></TextView>
 
 
+
 		            <AbsoluteLayout
 android:visibility="gone"	            		widget-override="AbsoluteLayout"
 		            	android:id="@+id/layout_y0"
@@ -78,6 +80,7 @@ android:text="Test 10dp"></TextView></AbsoluteLayout>
 	                android:layout_width="match_parent"
 	                android:layout_height="wrap_content"
 	                android:text="Test Set and Get Test"></TextView>
+
 
 
 			<AbsoluteLayout

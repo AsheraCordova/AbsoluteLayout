@@ -219,6 +219,9 @@ return layoutParams.y;			}
 	public class AbsoluteLayoutExt extends android.widget.AbsoluteLayout implements ILifeCycleDecorator, com.ashera.widget.IMaxDimension{
 		private MeasureEvent measureFinished = new MeasureEvent();
 		private OnLayoutEvent onLayoutEvent = new OnLayoutEvent();
+		public IWidget getWidget() {
+			return AbsoluteLayoutImpl.this;
+		}
 		private int mMaxWidth = -1;
 		private int mMaxHeight = -1;
 		@Override
