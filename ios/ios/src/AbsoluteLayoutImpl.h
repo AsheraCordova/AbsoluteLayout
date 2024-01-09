@@ -171,6 +171,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl)
 
 - (void)drawableStateChanged;
 
+- (void)endViewTransitionWithADView:(ADView *)view;
+
 - (void)executeWithNSString:(NSString *)method
           withNSObjectArray:(IOSObjectArray *)canvas;
 
@@ -215,6 +217,16 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl)
 
 - (void)setMyAttributeWithNSString:(NSString *)name
                             withId:(id)value;
+
+- (void)setState0WithId:(id)value;
+
+- (void)setState1WithId:(id)value;
+
+- (void)setState2WithId:(id)value;
+
+- (void)setState3WithId:(id)value;
+
+- (void)setState4WithId:(id)value;
 
 - (void)setVisibilityWithInt:(jint)visibility;
 
@@ -283,6 +295,10 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)addModelWithId:(id)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)animatorXmlWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)endAnimator;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)executeWithBoolean:(jboolean)setter;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)invalidate;
@@ -303,6 +319,10 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setAlphaWithFloat:(jfloat)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setAnimateLayoutChangesWithBoolean:(jboolean)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setAnimateParentHierarchyWithBoolean:(jboolean)arg0;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setAsDragSourceWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setAttributeUnderTestWithNSString:(NSString *)arg0;
@@ -314,6 +334,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setBackgroundTintWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setBackgroundWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setBottomWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setChildXmlWithNSString:(NSString *)arg0;
 
@@ -421,6 +443,12 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setLayoutModeWithNSString:(NSString *)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setLayoutTransitionDurationWithInt:(jint)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setLayoutTransitionWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setLeftWithNSString:(NSString *)arg0;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setListitemWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setLongClickableWithBoolean:(jboolean)arg0;
@@ -450,6 +478,14 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setModelUiToPojoEventIdsWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setModelUiToPojoWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnAnimationCancelWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnAnimationEndWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnAnimationRepeatWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnAnimationStartWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setOnChildViewAddedWithNSString:(NSString *)arg0;
 
@@ -487,6 +523,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setPaddingWithNSString:(NSString *)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setRightWithNSString:(NSString *)arg0;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setRotationWithFloat:(jfloat)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setRotationXWithFloat:(jfloat)arg0;
@@ -504,6 +542,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setTextAlignmentWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setTextDirectionWithNSString:(NSString *)arg0;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setTopWithNSString:(NSString *)arg0;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setTransformPivotXWithNSString:(NSString *)arg0;
 
@@ -537,6 +577,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)setZIndexWithInt:(jint)arg0;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)startAnimator;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetAddStatesFromChildren;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetAlpha;
@@ -546,6 +588,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetBackgroundTint;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetBackgroundTintMode;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetBottom;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetClickable;
 
@@ -633,6 +677,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetLayoutMode;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetLeft;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetLongClickable;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetMaxHeight;
@@ -667,6 +713,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetPaddingTop;
 
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetRight;
+
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetRotation;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetRotationX;
@@ -682,6 +730,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetTextAlignment;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetTextDirection;
+
+- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetTop;
 
 - (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)tryGetTransformPivotX;
 
