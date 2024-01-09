@@ -95,7 +95,7 @@ public class AbsoluteLayoutImpl extends BaseHasWidgets {
         }    
         return remove;
     }
-	
+
 	private void nativeRemoveView(IWidget widget) {
 		r.android.animation.LayoutTransition layoutTransition = absoluteLayout.getLayoutTransition();
 		if (layoutTransition != null && (
