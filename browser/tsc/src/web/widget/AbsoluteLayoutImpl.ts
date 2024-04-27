@@ -13,6 +13,7 @@ import {MotionEvent} from '../../app/MotionEvent';
 import {DragEvent} from '../../app/DragEvent';
 import {KeyEvent} from '../../app/KeyEvent';
 import { ScopedObject } from '../../app/ScopedObject';
+import { Mixin, decorate } from 'ts-mixer';
 
 
 
@@ -25,7 +26,7 @@ export abstract class AbsoluteLayoutImpl<T> extends ViewGroupImpl<T>{
 	static initialize() {
     }	
 
-	@Exclude()
+	@decorate(Exclude())
 	protected thisPointer: T;	
 	protected abstract getThisPointer(): T;
 	reset() : T {	
@@ -43,13 +44,13 @@ export abstract class AbsoluteLayoutImpl<T> extends ViewGroupImpl<T>{
 	
 //start - staticinit
 export abstract class AbsoluteLayoutImpl_LayoutParams<T> extends ViewGroupImpl_LayoutParams<T> {
-	@Type(() => CommandAttr)
-	@Expose({ name: "layout_x" })
+	@decorate(Type(() => CommandAttr))
+	@decorate(Expose({ name: "layout_x" }))
 	layout_x!:CommandAttr<string>| undefined;
-	@Type(() => CommandAttr)
-	@Expose({ name: "layout_y" })
+	@decorate(Type(() => CommandAttr))
+	@decorate(Expose({ name: "layout_y" }))
 	layout_y!:CommandAttr<string>| undefined;
-	@Exclude()
+	@decorate(Exclude())
 	protected thisPointer: T;	
 	protected abstract getThisPointer(): T;
 	reset() : T {	
