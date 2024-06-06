@@ -108,6 +108,10 @@ import ImageRadioButtonSwtActivity from './ImageRadioButtonSwtActivity';
 import ToggleButtonSwtActivity from './ToggleButtonSwtActivity';
 import ToggleButtonIosActivity from './ToggleButtonIosActivity';
 import ToggleButtonWebActivity from './ToggleButtonWebActivity';
+import fragmentAndroidActivity from './fragmentAndroidActivity';
+import fragmentSwtActivity from './fragmentSwtActivity';
+import fragmentWebActivity from './fragmentWebActivity';
+import fragmentIosActivity from './fragmentIosActivity';
 import SpinnerAndroidActivity from './SpinnerAndroidActivity';
 import SpinnerSwtActivity from './SpinnerSwtActivity';
 import CComboSwtActivity from './CComboSwtActivity';
@@ -262,6 +266,10 @@ export const fragmentMapper : any = {
 	'layout/togglebuttonswt_test.xml': ToggleButtonSwtActivity,
 	'layout/togglebuttonios_test.xml': ToggleButtonIosActivity,
 	'layout/togglebuttonweb_test.xml': ToggleButtonWebActivity,
+	'layout/fragmentandroid_test.xml': fragmentAndroidActivity,
+	'layout/fragmentswt_test.xml': fragmentSwtActivity,
+	'layout/fragmentweb_test.xml': fragmentWebActivity,
+	'layout/fragmentios_test.xml': fragmentIosActivity,
 	'layout/spinnerandroid_test.xml': SpinnerAndroidActivity,
 	'layout/spinnerswt_test.xml': SpinnerSwtActivity,
 	'layout/ccomboswt_test.xml': CComboSwtActivity,

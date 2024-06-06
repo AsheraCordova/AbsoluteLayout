@@ -136,6 +136,10 @@ export default class HomeActivity extends Activity{
 				{"id": "ToggleButtonSwtActivity","name" : "ToggleButtonSwtActivity"},
 				{"id": "ToggleButtonIosActivity","name" : "ToggleButtonIosActivity"},
 				{"id": "ToggleButtonWebActivity","name" : "ToggleButtonWebActivity"},
+				{"id": "fragmentAndroidActivity","name" : "fragmentAndroidActivity"},
+				{"id": "fragmentSwtActivity","name" : "fragmentSwtActivity"},
+				{"id": "fragmentWebActivity","name" : "fragmentWebActivity"},
+				{"id": "fragmentIosActivity","name" : "fragmentIosActivity"},
 				{"id": "SpinnerAndroidActivity","name" : "SpinnerAndroidActivity"},
 				{"id": "SpinnerSwtActivity","name" : "SpinnerSwtActivity"},
 				{"id": "CComboSwtActivity","name" : "CComboSwtActivity"},
@@ -1125,6 +1129,42 @@ export default class HomeActivity extends Activity{
 				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
 			}
         	await this.navController.reset().navigate("fragment#framelayout#layout/togglebuttonweb_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'fragmentAndroidActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/fragmentandroid_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'fragmentSwtActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/fragmentswt_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'fragmentWebActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/fragmentweb_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'fragmentIosActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/fragmentios_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
     	}	
 		else if (obj.id == 'SpinnerAndroidActivity') {
 			let list = [];
