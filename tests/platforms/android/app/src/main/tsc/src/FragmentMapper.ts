@@ -108,6 +108,10 @@ import ImageRadioButtonSwtActivity from './ImageRadioButtonSwtActivity';
 import ToggleButtonSwtActivity from './ToggleButtonSwtActivity';
 import ToggleButtonIosActivity from './ToggleButtonIosActivity';
 import ToggleButtonWebActivity from './ToggleButtonWebActivity';
+import ViewOverlayAndroidActivity from './ViewOverlayAndroidActivity';
+import ViewOverlayWebActivity from './ViewOverlayWebActivity';
+import ViewOverlayIosActivity from './ViewOverlayIosActivity';
+import ViewOverlaySwtActivity from './ViewOverlaySwtActivity';
 import fragmentAndroidActivity from './fragmentAndroidActivity';
 import fragmentSwtActivity from './fragmentSwtActivity';
 import fragmentWebActivity from './fragmentWebActivity';
@@ -266,6 +270,10 @@ export const fragmentMapper : any = {
 	'layout/togglebuttonswt_test.xml': ToggleButtonSwtActivity,
 	'layout/togglebuttonios_test.xml': ToggleButtonIosActivity,
 	'layout/togglebuttonweb_test.xml': ToggleButtonWebActivity,
+	'layout/viewoverlayandroid_test.xml': ViewOverlayAndroidActivity,
+	'layout/viewoverlayweb_test.xml': ViewOverlayWebActivity,
+	'layout/viewoverlayios_test.xml': ViewOverlayIosActivity,
+	'layout/viewoverlayswt_test.xml': ViewOverlaySwtActivity,
 	'layout/fragmentandroid_test.xml': fragmentAndroidActivity,
 	'layout/fragmentswt_test.xml': fragmentSwtActivity,
 	'layout/fragmentweb_test.xml': fragmentWebActivity,
