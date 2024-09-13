@@ -38,20 +38,21 @@
 #include "ASUIView.h"
 #include "HasLifeCycleDecorators.h"
 
+@protocol JavaUtilList;
 @protocol JavaUtilMap;
 
 
 #pragma clang diagnostic ignored "-Wprotocol"
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-@interface ASAbsoluteLayoutImpl () {
+@interface ComAsheraAbsolutelayoutAbsoluteLayoutImpl () {
  @public
   id uiView_;
   ADAbsoluteLayout *absoluteLayout_;
-  ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *builder_;
-  ASAbsoluteLayoutImpl_AbsoluteLayoutBean *bean_;
-  ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *paramsBuilder_;
-  ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *paramsBean_;
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *builder_;
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean *bean_;
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *paramsBuilder_;
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *paramsBean_;
 }
 
 - (void)setWidgetOnNativeClass;
@@ -64,26 +65,27 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl, uiView_, id)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl, absoluteLayout_, ADAbsoluteLayout *)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl, builder_, ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl, bean_, ASAbsoluteLayoutImpl_AbsoluteLayoutBean *)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl, paramsBuilder_, ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl, paramsBean_, ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, uiView_, id)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, absoluteLayout_, ADAbsoluteLayout *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, builder_, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, bean_, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, paramsBuilder_, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, paramsBean_, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *)
 
-__attribute__((unused)) static void ASAbsoluteLayoutImpl_setWidgetOnNativeClass(ASAbsoluteLayoutImpl *self);
+__attribute__((unused)) static void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_setWidgetOnNativeClass(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self);
 
-__attribute__((unused)) static void ASAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(ASAbsoluteLayoutImpl *self, id<ASIWidget> widget);
+__attribute__((unused)) static void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, id<ASIWidget> widget);
 
-__attribute__((unused)) static void ASAbsoluteLayoutImpl_createLayoutParamsWithADView_(ASAbsoluteLayoutImpl *self, ADView *view);
+__attribute__((unused)) static void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_createLayoutParamsWithADView_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, ADView *view);
 
-__attribute__((unused)) static ADAbsoluteLayout_LayoutParams *ASAbsoluteLayoutImpl_getLayoutParamsWithADView_(ASAbsoluteLayoutImpl *self, ADView *view);
+__attribute__((unused)) static ADAbsoluteLayout_LayoutParams *ComAsheraAbsolutelayoutAbsoluteLayoutImpl_getLayoutParamsWithADView_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, ADView *view);
 
-@interface ASAbsoluteLayoutImpl_AbsoluteLayoutExt () {
+@interface ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt () {
  @public
-  __unsafe_unretained ASAbsoluteLayoutImpl *this$0_;
+  __unsafe_unretained ComAsheraAbsolutelayoutAbsoluteLayoutImpl *this$0_;
   ASMeasureEvent *measureFinished_;
   ASOnLayoutEvent *onLayoutEvent_;
+  id<JavaUtilList> overlays_;
   jint mMaxWidth_;
   jint mMaxHeight_;
   id<JavaUtilMap> templates_;
@@ -91,25 +93,26 @@ __attribute__((unused)) static ADAbsoluteLayout_LayoutParams *ASAbsoluteLayoutIm
 
 @end
 
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt, measureFinished_, ASMeasureEvent *)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt, onLayoutEvent_, ASOnLayoutEvent *)
-J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt, templates_, id<JavaUtilMap>)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt, measureFinished_, ASMeasureEvent *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt, onLayoutEvent_, ASOnLayoutEvent *)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt, overlays_, id<JavaUtilList>)
+J2OBJC_FIELD_SETTER(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt, templates_, id<JavaUtilMap>)
 
-@interface ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder () {
+@interface ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder () {
  @public
-  ASAbsoluteLayoutImpl *this$0_;
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl *this$0_;
 }
 
 @end
 
-@interface ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean () {
+@interface ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean () {
  @public
-  ASAbsoluteLayoutImpl *this$0_;
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl *this$0_;
 }
 
 @end
 
-@interface ASAbsoluteLayoutImpl_$Lambda$1 : NSObject < JavaLangRunnable > {
+@interface ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 : NSObject < JavaLangRunnable > {
  @public
   id<ASIWidget> val$widget_;
 }
@@ -118,18 +121,18 @@ J2OBJC_FIELD_SETTER(ASAbsoluteLayoutImpl_AbsoluteLayoutExt, templates_, id<JavaU
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ASAbsoluteLayoutImpl_$Lambda$1)
+J2OBJC_EMPTY_STATIC_INIT(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1)
 
-__attribute__((unused)) static void ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(ASAbsoluteLayoutImpl_$Lambda$1 *self, id<ASIWidget> capture$0);
+__attribute__((unused)) static void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 *self, id<ASIWidget> capture$0);
 
-__attribute__((unused)) static ASAbsoluteLayoutImpl_$Lambda$1 *new_ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ASAbsoluteLayoutImpl_$Lambda$1 *create_ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0);
+__attribute__((unused)) static ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0);
 
-NSString *ASAbsoluteLayoutImpl_LOCAL_NAME = @"AbsoluteLayout";
-NSString *ASAbsoluteLayoutImpl_GROUP_NAME = @"AbsoluteLayout";
+NSString *ComAsheraAbsolutelayoutAbsoluteLayoutImpl_LOCAL_NAME = @"AbsoluteLayout";
+NSString *ComAsheraAbsolutelayoutAbsoluteLayoutImpl_GROUP_NAME = @"AbsoluteLayout";
 
-@implementation ASAbsoluteLayoutImpl
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl
 
 @synthesize uiView = uiView_;
 
@@ -141,37 +144,37 @@ NSString *ASAbsoluteLayoutImpl_GROUP_NAME = @"AbsoluteLayout";
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ASAbsoluteLayoutImpl_init(self);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
 - (instancetype)initWithNSString:(NSString *)localname {
-  ASAbsoluteLayoutImpl_initWithNSString_(self, localname);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_(self, localname);
   return self;
 }
 
 - (instancetype)initWithNSString:(NSString *)groupName
                     withNSString:(NSString *)localname {
-  ASAbsoluteLayoutImpl_initWithNSString_withNSString_(self, groupName, localname);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_withNSString_(self, groupName, localname);
   return self;
 }
 
 - (id<ASIWidget>)newInstance {
-  return new_ASAbsoluteLayoutImpl_initWithNSString_withNSString_(groupName_, localName_);
+  return new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_withNSString_(groupName_, localName_);
 }
 
 - (void)createWithASIFragment:(id<ASIFragment>)fragment
               withJavaUtilMap:(id<JavaUtilMap>)params {
   [super createWithASIFragment:fragment withJavaUtilMap:params];
-  absoluteLayout_ = new_ASAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithASAbsoluteLayoutImpl_(self);
+  absoluteLayout_ = new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self);
   [self nativeCreateWithJavaUtilMap:params];
   ASViewGroupImpl_registerCommandConveterWithASIWidget_(self);
-  ASAbsoluteLayoutImpl_setWidgetOnNativeClass(self);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_setWidgetOnNativeClass(self);
 }
 
 - (void)setWidgetOnNativeClass {
-  ASAbsoluteLayoutImpl_setWidgetOnNativeClass(self);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_setWidgetOnNativeClass(self);
 }
 
 - (id)asWidget {
@@ -181,7 +184,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 - (jboolean)removeWithASIWidget:(id<ASIWidget>)w {
   jboolean remove = [super removeWithASIWidget:w];
   [((ADAbsoluteLayout *) nil_chk(absoluteLayout_)) removeViewWithADView:(ADView *) cast_chk([((id<ASIWidget>) nil_chk(w)) asWidget], [ADView class])];
-  ASAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(self, w);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(self, w);
   return remove;
 }
 
@@ -190,20 +193,20 @@ J2OBJC_IGNORE_DESIGNATED_END
   jboolean remove = [super removeWithInt:index];
   if (index + 1 <= [((ADAbsoluteLayout *) nil_chk(absoluteLayout_)) getChildCount]) {
     [((ADAbsoluteLayout *) nil_chk(absoluteLayout_)) removeViewAtWithInt:index];
-    ASAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(self, widget);
+    ComAsheraAbsolutelayoutAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(self, widget);
   }
   return remove;
 }
 
 - (void)nativeRemoveViewWithASIWidget:(id<ASIWidget>)widget {
-  ASAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(self, widget);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(self, widget);
 }
 
 - (void)addWithASIWidget:(id<ASIWidget>)w
                  withInt:(jint)index {
   if (index != -2) {
     ADView *view = (ADView *) cast_chk([((id<ASIWidget>) nil_chk(w)) asWidget], [ADView class]);
-    ASAbsoluteLayoutImpl_createLayoutParamsWithADView_(self, view);
+    ComAsheraAbsolutelayoutAbsoluteLayoutImpl_createLayoutParamsWithADView_(self, view);
     if (index == -1) {
       [((ADAbsoluteLayout *) nil_chk(absoluteLayout_)) addViewWithADView:view];
     }
@@ -216,11 +219,11 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (void)createLayoutParamsWithADView:(ADView *)view {
-  ASAbsoluteLayoutImpl_createLayoutParamsWithADView_(self, view);
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_createLayoutParamsWithADView_(self, view);
 }
 
 - (ADAbsoluteLayout_LayoutParams *)getLayoutParamsWithADView:(ADView *)view {
-  return ASAbsoluteLayoutImpl_getLayoutParamsWithADView_(self, view);
+  return ComAsheraAbsolutelayoutAbsoluteLayoutImpl_getLayoutParamsWithADView_(self, view);
 }
 
 - (void)setChildAttributeWithASIWidget:(id<ASIWidget>)w
@@ -228,7 +231,7 @@ J2OBJC_IGNORE_DESIGNATED_END
                           withNSString:(NSString *)strValue
                                 withId:(id)objValue {
   ADView *view = (ADView *) cast_chk([((id<ASIWidget>) nil_chk(w)) asWidget], [ADView class]);
-  ADAbsoluteLayout_LayoutParams *layoutParams = ASAbsoluteLayoutImpl_getLayoutParamsWithADView_(self, view);
+  ADAbsoluteLayout_LayoutParams *layoutParams = ComAsheraAbsolutelayoutAbsoluteLayoutImpl_getLayoutParamsWithADView_(self, view);
   ASViewGroupImpl_setChildAttributeWithASIWidget_withASWidgetAttribute_withId_withId_(w, key, objValue, layoutParams);
   switch (JreIndexOfStr([((ASWidgetAttribute *) nil_chk(key)) getAttributeName], (id[]){ @"layout_width", @"layout_height", @"layout_x", @"layout_y" }, 4)) {
     case 0:
@@ -260,7 +263,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     return attributeValue;
   }
   ADView *view = (ADView *) cast_chk([((id<ASIWidget>) nil_chk(w)) asWidget], [ADView class]);
-  ADAbsoluteLayout_LayoutParams *layoutParams = ASAbsoluteLayoutImpl_getLayoutParamsWithADView_(self, view);
+  ADAbsoluteLayout_LayoutParams *layoutParams = ComAsheraAbsolutelayoutAbsoluteLayoutImpl_getLayoutParamsWithADView_(self, view);
   switch (JreIndexOfStr([((ASWidgetAttribute *) nil_chk(key)) getAttributeName], (id[]){ @"layout_width", @"layout_height", @"layout_x", @"layout_y" }, 4)) {
     case 0:
     return JavaLangInteger_valueOfWithInt_(((ADAbsoluteLayout_LayoutParams *) nil_chk(layoutParams))->width_);
@@ -279,7 +282,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (IOSClass *)getViewClass {
-  return ASAbsoluteLayoutImpl_AbsoluteLayoutExt_class_();
+  return ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt_class_();
 }
 
 - (void)setAttributeWithASWidgetAttribute:(ASWidgetAttribute *)key
@@ -341,30 +344,30 @@ J2OBJC_IGNORE_DESIGNATED_END
   return [((id<ASIAttributable>) nil_chk(ASWidgetFactory_getAttributableWithNSString_(plugin))) newInstanceWithASIWidget:self];
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutBean *)getBean {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean *)getBean {
   if (bean_ == nil) {
-    bean_ = new_ASAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithASAbsoluteLayoutImpl_(self);
+    bean_ = new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self);
   }
   return bean_;
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)getBuilder {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)getBuilder {
   if (builder_ == nil) {
-    builder_ = new_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithASAbsoluteLayoutImpl_(self);
+    builder_ = new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self);
   }
   return builder_;
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *)getParamsBean {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *)getParamsBean {
   if (paramsBean_ == nil) {
-    paramsBean_ = new_ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithASAbsoluteLayoutImpl_(self);
+    paramsBean_ = new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self);
   }
   return paramsBean_;
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)getParamsBuilder {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)getParamsBuilder {
   if (paramsBuilder_ == nil) {
-    paramsBuilder_ = new_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithASAbsoluteLayoutImpl_(self);
+    paramsBuilder_ = new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self);
   }
   return paramsBuilder_;
 }
@@ -398,10 +401,10 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x1, 27, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 28, 29, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 30, 1, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutBean;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -443,69 +446,69 @@ J2OBJC_IGNORE_DESIGNATED_END
     { "LOCAL_NAME", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 31, -1, -1 },
     { "GROUP_NAME", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 32, -1, -1 },
     { "absoluteLayout_", "LADAbsoluteLayout;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "builder_", "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "bean_", "LASAbsoluteLayoutImpl_AbsoluteLayoutBean;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "paramsBuilder_", "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "paramsBean_", "LASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "builder_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "bean_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "paramsBuilder_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "paramsBean_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "loadAttributes", "LNSString;", "LNSString;LNSString;", "create", "LASIFragment;LJavaUtilMap;", "(Lcom/ashera/core/IFragment;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)V", "remove", "LASIWidget;", "I", "nativeRemoveView", "add", "LASIWidget;I", "createLayoutParams", "LADView;", "getLayoutParams", "setChildAttribute", "LASIWidget;LASWidgetAttribute;LNSString;LNSObject;", "getChildAttribute", "LASIWidget;LASWidgetAttribute;", "setAttribute", "LASWidgetAttribute;LNSString;LNSObject;LASILifeCycleDecorator;", "getAttribute", "LASWidgetAttribute;LASILifeCycleDecorator;", "checkIosVersion", "nativeCreate", "LJavaUtilMap;", "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)V", "setId", "setVisible", "Z", "getPlugin", &ASAbsoluteLayoutImpl_LOCAL_NAME, &ASAbsoluteLayoutImpl_GROUP_NAME, "LASAbsoluteLayoutImpl_AbsoluteLayoutExt;LASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;LASAbsoluteLayoutImpl_AbsoluteLayoutBean;LASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;" };
-  static const J2ObjcClassInfo _ASAbsoluteLayoutImpl = { "AbsoluteLayoutImpl", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 31, 8, -1, 33, -1, -1, -1 };
-  return &_ASAbsoluteLayoutImpl;
+  static const void *ptrTable[] = { "loadAttributes", "LNSString;", "LNSString;LNSString;", "create", "LASIFragment;LJavaUtilMap;", "(Lcom/ashera/core/IFragment;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)V", "remove", "LASIWidget;", "I", "nativeRemoveView", "add", "LASIWidget;I", "createLayoutParams", "LADView;", "getLayoutParams", "setChildAttribute", "LASIWidget;LASWidgetAttribute;LNSString;LNSObject;", "getChildAttribute", "LASIWidget;LASWidgetAttribute;", "setAttribute", "LASWidgetAttribute;LNSString;LNSObject;LASILifeCycleDecorator;", "getAttribute", "LASWidgetAttribute;LASILifeCycleDecorator;", "checkIosVersion", "nativeCreate", "LJavaUtilMap;", "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)V", "setId", "setVisible", "Z", "getPlugin", &ComAsheraAbsolutelayoutAbsoluteLayoutImpl_LOCAL_NAME, &ComAsheraAbsolutelayoutAbsoluteLayoutImpl_GROUP_NAME, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt;LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean;LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;" };
+  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutImpl = { "AbsoluteLayoutImpl", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 31, 8, -1, 33, -1, -1, -1 };
+  return &_ComAsheraAbsolutelayoutAbsoluteLayoutImpl;
 }
 
 @end
 
-void ASAbsoluteLayoutImpl_init(ASAbsoluteLayoutImpl *self) {
-  ASBaseHasWidgets_initWithNSString_withNSString_(self, ASAbsoluteLayoutImpl_GROUP_NAME, ASAbsoluteLayoutImpl_LOCAL_NAME);
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_init(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self) {
+  ASBaseHasWidgets_initWithNSString_withNSString_(self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_GROUP_NAME, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_LOCAL_NAME);
 }
 
-ASAbsoluteLayoutImpl *new_ASAbsoluteLayoutImpl_init() {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl, init)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_init() {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, init)
 }
 
-ASAbsoluteLayoutImpl *create_ASAbsoluteLayoutImpl_init() {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl, init)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_init() {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, init)
 }
 
-void ASAbsoluteLayoutImpl_initWithNSString_(ASAbsoluteLayoutImpl *self, NSString *localname) {
-  ASBaseHasWidgets_initWithNSString_withNSString_(self, ASAbsoluteLayoutImpl_GROUP_NAME, localname);
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, NSString *localname) {
+  ASBaseHasWidgets_initWithNSString_withNSString_(self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl_GROUP_NAME, localname);
 }
 
-ASAbsoluteLayoutImpl *new_ASAbsoluteLayoutImpl_initWithNSString_(NSString *localname) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl, initWithNSString_, localname)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_(NSString *localname) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, initWithNSString_, localname)
 }
 
-ASAbsoluteLayoutImpl *create_ASAbsoluteLayoutImpl_initWithNSString_(NSString *localname) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl, initWithNSString_, localname)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_(NSString *localname) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, initWithNSString_, localname)
 }
 
-void ASAbsoluteLayoutImpl_initWithNSString_withNSString_(ASAbsoluteLayoutImpl *self, NSString *groupName, NSString *localname) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_withNSString_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, NSString *groupName, NSString *localname) {
   ASBaseHasWidgets_initWithNSString_withNSString_(self, groupName, localname);
 }
 
-ASAbsoluteLayoutImpl *new_ASAbsoluteLayoutImpl_initWithNSString_withNSString_(NSString *groupName, NSString *localname) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl, initWithNSString_withNSString_, groupName, localname)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_withNSString_(NSString *groupName, NSString *localname) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, initWithNSString_withNSString_, groupName, localname)
 }
 
-ASAbsoluteLayoutImpl *create_ASAbsoluteLayoutImpl_initWithNSString_withNSString_(NSString *groupName, NSString *localname) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl, initWithNSString_withNSString_, groupName, localname)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_initWithNSString_withNSString_(NSString *groupName, NSString *localname) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl, initWithNSString_withNSString_, groupName, localname)
 }
 
-void ASAbsoluteLayoutImpl_setWidgetOnNativeClass(ASAbsoluteLayoutImpl *self) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_setWidgetOnNativeClass(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self) {
   ((ASUIView*) [self asNativeWidget]).widget = self;
 }
 
-void ASAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(ASAbsoluteLayoutImpl *self, id<ASIWidget> widget) {
-  RAndroidAnimationLayoutTransition *layoutTransition = [((ADAbsoluteLayout *) nil_chk(self->absoluteLayout_)) getLayoutTransition];
-  if (layoutTransition != nil && ([layoutTransition isTransitionTypeEnabledWithInt:RAndroidAnimationLayoutTransition_CHANGE_DISAPPEARING] || [layoutTransition isTransitionTypeEnabledWithInt:RAndroidAnimationLayoutTransition_DISAPPEARING])) {
-    [self addToBufferedRunnablesWithJavaLangRunnable:new_ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(widget)];
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_nativeRemoveViewWithASIWidget_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, id<ASIWidget> widget) {
+  ADLayoutTransition *layoutTransition = [((ADAbsoluteLayout *) nil_chk(self->absoluteLayout_)) getLayoutTransition];
+  if (layoutTransition != nil && ([layoutTransition isTransitionTypeEnabledWithInt:ADLayoutTransition_CHANGE_DISAPPEARING] || [layoutTransition isTransitionTypeEnabledWithInt:ADLayoutTransition_DISAPPEARING])) {
+    [self addToBufferedRunnablesWithJavaLangRunnable:new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(widget)];
   }
   else {
     ASViewGroupImpl_nativeRemoveViewWithASIWidget_(widget);
   }
 }
 
-void ASAbsoluteLayoutImpl_createLayoutParamsWithADView_(ASAbsoluteLayoutImpl *self, ADView *view) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_createLayoutParamsWithADView_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, ADView *view) {
   ADAbsoluteLayout_LayoutParams *layoutParams = (ADAbsoluteLayout_LayoutParams *) cast_chk([((ADView *) nil_chk(view)) getLayoutParams], [ADAbsoluteLayout_LayoutParams class]);
   layoutParams = (ADAbsoluteLayout_LayoutParams *) cast_chk([view getLayoutParams], [ADAbsoluteLayout_LayoutParams class]);
   if (layoutParams == nil) {
@@ -518,13 +521,13 @@ void ASAbsoluteLayoutImpl_createLayoutParamsWithADView_(ASAbsoluteLayoutImpl *se
   }
 }
 
-ADAbsoluteLayout_LayoutParams *ASAbsoluteLayoutImpl_getLayoutParamsWithADView_(ASAbsoluteLayoutImpl *self, ADView *view) {
+ADAbsoluteLayout_LayoutParams *ComAsheraAbsolutelayoutAbsoluteLayoutImpl_getLayoutParamsWithADView_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *self, ADView *view) {
   return (ADAbsoluteLayout_LayoutParams *) cast_chk([((ADView *) nil_chk(view)) getLayoutParams], [ADAbsoluteLayout_LayoutParams class]);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutImpl)
 
-@implementation ASAbsoluteLayoutImpl_AbsoluteLayoutExt
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt
 
 - (id<ASIWidget>)getWidget {
   return this$0_;
@@ -546,8 +549,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
   return mMaxHeight_;
 }
 
-- (instancetype)initWithASAbsoluteLayoutImpl:(ASAbsoluteLayoutImpl *)outer$ {
-  ASAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithASAbsoluteLayoutImpl_(self, outer$);
+- (instancetype)initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *)outer$ {
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self, outer$);
   return self;
 }
 
@@ -575,9 +578,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
                     withInt:(jint)b {
   [super onLayoutWithBoolean:changed withInt:l withInt:t withInt:r withInt:b];
   ASViewImpl_setDrawableBoundsWithASIWidget_withInt_withInt_withInt_withInt_(this$0_, l, t, r, b);
-  ASViewImpl_nativeMakeFrameWithId_withInt_withInt_withInt_withInt_([this$0_ asNativeWidget], l, t, r, b);
+  if (![self isOverlay]) {
+    ASViewImpl_nativeMakeFrameWithId_withInt_withInt_withInt_withInt_([this$0_ asNativeWidget], l, t, r, b);
+  }
   [this$0_ replayBufferedEvents];
   ASViewImpl_redrawDrawablesWithASIWidget_(this$0_);
+  overlays_ = ASViewImpl_drawOverlayWithASIWidget_withJavaUtilList_(this$0_, overlays_);
   id<ASIWidgetLifeCycleListener> listener = [this$0_ getListener];
   if (listener != nil) {
     [((ASOnLayoutEvent *) nil_chk(onLayoutEvent_)) setBWithInt:b];
@@ -642,7 +648,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
 }
 
 - (void)remeasure {
-  [((id<ASIFragment>) nil_chk([this$0_ getFragment])) remeasure];
+  if ([this$0_ getFragment] != nil) {
+    [((id<ASIFragment>) nil_chk([this$0_ getFragment])) remeasure];
+  }
 }
 
 - (void)removeFromParent {
@@ -693,7 +701,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
     [self setState4WithId:value];
     return;
   }
-  [this$0_ setAttributeWithNSString:name withId:value withBoolean:true];
+  [this$0_ setAttributeWithNSString:name withId:value withBoolean:!([value isKindOfClass:[NSString class]])];
 }
 
 - (void)setVisibilityWithInt:(jint)visibility {
@@ -754,7 +762,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
   [this$0_ runBufferedRunnables];
 }
 
-- (void)__javaClone:(ASAbsoluteLayoutImpl_AbsoluteLayoutExt *)original {
+- (void)__javaClone:(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt *)original {
   [super __javaClone:original];
   JreRelease(this$0_);
 }
@@ -808,7 +816,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
   methods[2].selector = @selector(setMaxHeightWithInt:);
   methods[3].selector = @selector(getMaxWidth);
   methods[4].selector = @selector(getMaxHeight);
-  methods[5].selector = @selector(initWithASAbsoluteLayoutImpl:);
+  methods[5].selector = @selector(initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:);
   methods[6].selector = @selector(onMeasureWithInt:withInt:);
   methods[7].selector = @selector(onLayoutWithBoolean:withInt:withInt:withInt:withInt:);
   methods[8].selector = @selector(executeWithNSString:withNSObjectArray:);
@@ -843,21 +851,22 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl)
   methods[37].selector = @selector(endViewTransitionWithADView:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LASAbsoluteLayoutImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "measureFinished_", "LASMeasureEvent;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "onLayoutEvent_", "LASOnLayoutEvent;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "overlays_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 37, -1 },
     { "mMaxWidth_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mMaxHeight_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "templates_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x2, -1, -1, 37, -1 },
+    { "templates_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x2, -1, -1, 38, -1 },
   };
-  static const void *ptrTable[] = { "setMaxWidth", "I", "setMaxHeight", "LASAbsoluteLayoutImpl;", "onMeasure", "II", "onLayout", "ZIIII", "execute", "LNSString;[LNSObject;", "updateMeasuredDimension", "newInstance", "LASIWidget;", "setAttribute", "LASWidgetAttribute;LNSString;LNSObject;", "()Ljava/util/List<Ljava/lang/String;>;", "getAttribute", "LASWidgetAttribute;", "inflateView", "LNSString;", "getLocationOnScreen", "[I", "getWindowVisibleDisplayFrame", "LADRect;", "offsetTopAndBottom", "offsetLeftAndRight", "setMyAttribute", "LNSString;LNSObject;", "setVisibility", "setState0", "LNSObject;", "setState1", "setState2", "setState3", "setState4", "endViewTransition", "LADView;", "Ljava/util/Map<Ljava/lang/String;Lcom/ashera/widget/IWidget;>;" };
-  static const J2ObjcClassInfo _ASAbsoluteLayoutImpl_AbsoluteLayoutExt = { "AbsoluteLayoutExt", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 38, 6, 3, -1, -1, -1, -1 };
-  return &_ASAbsoluteLayoutImpl_AbsoluteLayoutExt;
+  static const void *ptrTable[] = { "setMaxWidth", "I", "setMaxHeight", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", "onMeasure", "II", "onLayout", "ZIIII", "execute", "LNSString;[LNSObject;", "updateMeasuredDimension", "newInstance", "LASIWidget;", "setAttribute", "LASWidgetAttribute;LNSString;LNSObject;", "()Ljava/util/List<Ljava/lang/String;>;", "getAttribute", "LASWidgetAttribute;", "inflateView", "LNSString;", "getLocationOnScreen", "[I", "getWindowVisibleDisplayFrame", "LADRect;", "offsetTopAndBottom", "offsetLeftAndRight", "setMyAttribute", "LNSString;LNSObject;", "setVisibility", "setState0", "LNSObject;", "setState1", "setState2", "setState3", "setState4", "endViewTransition", "LADView;", "Ljava/util/List<Lcom/ashera/widget/IWidget;>;", "Ljava/util/Map<Ljava/lang/String;Lcom/ashera/widget/IWidget;>;" };
+  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt = { "AbsoluteLayoutExt", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 38, 7, 3, -1, -1, -1, -1 };
+  return &_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt;
 }
 
 @end
 
-void ASAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl_AbsoluteLayoutExt *self, ASAbsoluteLayoutImpl *outer$) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt *self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
   self->this$0_ = outer$;
   ADAbsoluteLayout_init(self);
   self->measureFinished_ = new_ASMeasureEvent_init();
@@ -866,24 +875,24 @@ void ASAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithASAbsoluteLayoutImpl_(ASAbso
   self->mMaxHeight_ = -1;
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutExt *new_ASAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutExt, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutExt *create_ASAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutExt, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutExt)
 
-@implementation ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder
 
-- (instancetype)initWithASAbsoluteLayoutImpl:(ASAbsoluteLayoutImpl *)outer$ {
-  ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithASAbsoluteLayoutImpl_(self, outer$);
+- (instancetype)initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *)outer$ {
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self, outer$);
   return self;
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)executeWithBoolean:(jboolean)setter {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *)executeWithBoolean:(jboolean)setter {
   if (setter) {
     [this$0_ executeCommandWithJavaUtilMap:command_ withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_SETTER_METHOD];
     [((id<ASIFragment>) nil_chk([this$0_ getFragment])) remeasure];
@@ -895,43 +904,43 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutExt)
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;", 0x1, 1, 2, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;", 0x1, 1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   #pragma clang diagnostic ignored "-Wundeclared-selector"
-  methods[0].selector = @selector(initWithASAbsoluteLayoutImpl:);
+  methods[0].selector = @selector(initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:);
   methods[1].selector = @selector(executeWithBoolean:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LASAbsoluteLayoutImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LASAbsoluteLayoutImpl;", "execute", "Z", "Lcom/ashera/layout/ViewGroupImpl$ViewGroupCommandBuilder<Lcom/ashera/absolutelayout/AbsoluteLayoutImpl$AbsoluteLayoutCommandBuilder;>;" };
-  static const J2ObjcClassInfo _ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder = { "AbsoluteLayoutCommandBuilder", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 2, 1, 0, -1, -1, 3, -1 };
-  return &_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;
+  static const void *ptrTable[] = { "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", "execute", "Z", "Lcom/ashera/layout/ViewGroupImpl$ViewGroupCommandBuilder<Lcom/ashera/absolutelayout/AbsoluteLayoutImpl$AbsoluteLayoutCommandBuilder;>;" };
+  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder = { "AbsoluteLayoutCommandBuilder", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 2, 1, 0, -1, -1, 3, -1 };
+  return &_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder;
 }
 
 @end
 
-void ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *self, ASAbsoluteLayoutImpl *outer$) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
   self->this$0_ = outer$;
   ASViewGroupImpl_ViewGroupCommandBuilder_init(self);
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *new_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *create_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandBuilder)
 
-@implementation ASAbsoluteLayoutImpl_AbsoluteLayoutBean
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean
 
-- (instancetype)initWithASAbsoluteLayoutImpl:(ASAbsoluteLayoutImpl *)outer$ {
-  ASAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithASAbsoluteLayoutImpl_(self, outer$);
+- (instancetype)initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *)outer$ {
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self, outer$);
   return self;
 }
 
@@ -942,64 +951,64 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandBuild
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   #pragma clang diagnostic ignored "-Wundeclared-selector"
-  methods[0].selector = @selector(initWithASAbsoluteLayoutImpl:);
+  methods[0].selector = @selector(initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LASAbsoluteLayoutImpl;" };
-  static const J2ObjcClassInfo _ASAbsoluteLayoutImpl_AbsoluteLayoutBean = { "AbsoluteLayoutBean", "com.ashera.absolutelayout", ptrTable, methods, NULL, 7, 0x1, 1, 0, 0, -1, -1, -1, -1 };
-  return &_ASAbsoluteLayoutImpl_AbsoluteLayoutBean;
+  static const void *ptrTable[] = { "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;" };
+  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean = { "AbsoluteLayoutBean", "com.ashera.absolutelayout", ptrTable, methods, NULL, 7, 0x1, 1, 0, 0, -1, -1, -1, -1 };
+  return &_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean;
 }
 
 @end
 
-void ASAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl_AbsoluteLayoutBean *self, ASAbsoluteLayoutImpl *outer$) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean *self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
   ASViewGroupImpl_ViewGroupBean_initWithASIWidget_(self, outer$);
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutBean *new_ASAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutBean, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutBean *create_ASAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutBean, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutBean)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutBean)
 
-@implementation ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean
 
-- (instancetype)initWithASAbsoluteLayoutImpl:(ASAbsoluteLayoutImpl *)outer$ {
-  ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithASAbsoluteLayoutImpl_(self, outer$);
+- (instancetype)initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *)outer$ {
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self, outer$);
   return self;
 }
 
 - (id)getLayoutXWithASIWidget:(id<ASIWidget>)w {
   id<JavaUtilMap> layoutParams = new_JavaUtilHashMap_init();
-  id<JavaUtilMap> command = [((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) tryGetLayoutX])) getCommand];
+  id<JavaUtilMap> command = [((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) tryGetLayoutX])) getCommand];
   (void) [layoutParams putWithId:@"layoutParams" withId:command];
   [((id<ASIWidget>) nil_chk(w)) executeCommandWithJavaUtilMap:layoutParams withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_GETTER_METHOD];
-  return [((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) getLayoutX];
+  return [((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) getLayoutX];
 }
 
 - (void)setLayoutXWithASIWidget:(id<ASIWidget>)w
                    withNSString:(NSString *)value {
   id<JavaUtilMap> layoutParams = new_JavaUtilHashMap_init();
-  (void) [layoutParams putWithId:@"layoutParams" withId:[((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) setLayoutXWithNSString:value])) getCommand]];
+  (void) [layoutParams putWithId:@"layoutParams" withId:[((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) setLayoutXWithNSString:value])) getCommand]];
   [((id<ASIWidget>) nil_chk(w)) executeCommandWithJavaUtilMap:layoutParams withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_SETTER_METHOD];
   [((id<ASIFragment>) nil_chk([w getFragment])) remeasure];
 }
 
 - (id)getLayoutYWithASIWidget:(id<ASIWidget>)w {
   id<JavaUtilMap> layoutParams = new_JavaUtilHashMap_init();
-  id<JavaUtilMap> command = [((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) tryGetLayoutY])) getCommand];
+  id<JavaUtilMap> command = [((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) tryGetLayoutY])) getCommand];
   (void) [layoutParams putWithId:@"layoutParams" withId:command];
   [((id<ASIWidget>) nil_chk(w)) executeCommandWithJavaUtilMap:layoutParams withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_GETTER_METHOD];
-  return [((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) getLayoutY];
+  return [((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) getLayoutY];
 }
 
 - (void)setLayoutYWithASIWidget:(id<ASIWidget>)w
                    withNSString:(NSString *)value {
   id<JavaUtilMap> layoutParams = new_JavaUtilHashMap_init();
-  (void) [layoutParams putWithId:@"layoutParams" withId:[((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) setLayoutYWithNSString:value])) getCommand]];
+  (void) [layoutParams putWithId:@"layoutParams" withId:[((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([((ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *) nil_chk([this$0_ getParamsBuilder])) reset])) setLayoutYWithNSString:value])) getCommand]];
   [((id<ASIWidget>) nil_chk(w)) executeCommandWithJavaUtilMap:layoutParams withASIWidget_CommandCallBack:nil withInt:ASIWidget_COMMAND_EXEC_SETTER_METHOD];
   [((id<ASIFragment>) nil_chk([w getFragment])) remeasure];
 }
@@ -1015,45 +1024,45 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutBean)
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   #pragma clang diagnostic ignored "-Wundeclared-selector"
-  methods[0].selector = @selector(initWithASAbsoluteLayoutImpl:);
+  methods[0].selector = @selector(initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:);
   methods[1].selector = @selector(getLayoutXWithASIWidget:);
   methods[2].selector = @selector(setLayoutXWithASIWidget:withNSString:);
   methods[3].selector = @selector(getLayoutYWithASIWidget:);
   methods[4].selector = @selector(setLayoutYWithASIWidget:withNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LASAbsoluteLayoutImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LASAbsoluteLayoutImpl;", "getLayoutX", "LASIWidget;", "setLayoutX", "LASIWidget;LNSString;", "getLayoutY", "setLayoutY" };
-  static const J2ObjcClassInfo _ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean = { "AbsoluteLayoutParamsBean", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 5, 1, 0, -1, -1, -1, -1 };
-  return &_ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;
+  static const void *ptrTable[] = { "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", "getLayoutX", "LASIWidget;", "setLayoutX", "LASIWidget;LNSString;", "getLayoutY", "setLayoutY" };
+  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean = { "AbsoluteLayoutParamsBean", "com.ashera.absolutelayout", ptrTable, methods, fields, 7, 0x1, 5, 1, 0, -1, -1, -1, -1 };
+  return &_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean;
 }
 
 @end
 
-void ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *self, ASAbsoluteLayoutImpl *outer$) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
   self->this$0_ = outer$;
   ASViewGroupImpl_ViewGroupParamsBean_init(self);
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *new_ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *create_ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
 
-@implementation ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder
 
-- (instancetype)initWithASAbsoluteLayoutImpl:(ASAbsoluteLayoutImpl *)outer$ {
-  ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithASAbsoluteLayoutImpl_(self, outer$);
+- (instancetype)initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *)outer$ {
+  ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(self, outer$);
   return self;
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)tryGetLayoutX {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)tryGetLayoutX {
   id<JavaUtilMap> attrs = [self initCommandWithNSString:@"layout_x"];
   (void) [((id<JavaUtilMap>) nil_chk(attrs)) putWithId:@"type" withId:@"attribute"];
   (void) [attrs putWithId:@"getter" withId:JavaLangBoolean_valueOfWithBoolean_(true)];
@@ -1066,7 +1075,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
   return [((id<JavaUtilMap>) nil_chk(attrs)) getWithId:@"commandReturnValue"];
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)setLayoutXWithNSString:(NSString *)value {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)setLayoutXWithNSString:(NSString *)value {
   id<JavaUtilMap> attrs = [self initCommandWithNSString:@"layout_x"];
   (void) [((id<JavaUtilMap>) nil_chk(attrs)) putWithId:@"type" withId:@"attribute"];
   (void) [attrs putWithId:@"setter" withId:JavaLangBoolean_valueOfWithBoolean_(true)];
@@ -1075,7 +1084,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
   return self;
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)tryGetLayoutY {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)tryGetLayoutY {
   id<JavaUtilMap> attrs = [self initCommandWithNSString:@"layout_y"];
   (void) [((id<JavaUtilMap>) nil_chk(attrs)) putWithId:@"type" withId:@"attribute"];
   (void) [attrs putWithId:@"getter" withId:JavaLangBoolean_valueOfWithBoolean_(true)];
@@ -1088,7 +1097,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
   return [((id<JavaUtilMap>) nil_chk(attrs)) getWithId:@"commandReturnValue"];
 }
 
-- (ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)setLayoutYWithNSString:(NSString *)value {
+- (ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *)setLayoutYWithNSString:(NSString *)value {
   id<JavaUtilMap> attrs = [self initCommandWithNSString:@"layout_y"];
   (void) [((id<JavaUtilMap>) nil_chk(attrs)) putWithId:@"type" withId:@"attribute"];
   (void) [attrs putWithId:@"setter" withId:JavaLangBoolean_valueOfWithBoolean_(true)];
@@ -1100,17 +1109,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, 1, 2, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, 1, 2, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, 3, 2, -1, -1, -1, -1 },
+    { NULL, "LComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;", 0x1, 3, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   #pragma clang diagnostic ignored "-Wundeclared-selector"
-  methods[0].selector = @selector(initWithASAbsoluteLayoutImpl:);
+  methods[0].selector = @selector(initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl:);
   methods[1].selector = @selector(tryGetLayoutX);
   methods[2].selector = @selector(getLayoutX);
   methods[3].selector = @selector(setLayoutXWithNSString:);
@@ -1118,28 +1127,28 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutParamsBean)
   methods[5].selector = @selector(getLayoutY);
   methods[6].selector = @selector(setLayoutYWithNSString:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LASAbsoluteLayoutImpl;", "setLayoutX", "LNSString;", "setLayoutY", "Lcom/ashera/layout/ViewGroupImpl$ViewGroupCommandParamsBuilder<Lcom/ashera/absolutelayout/AbsoluteLayoutImpl$AbsoluteLayoutCommandParamsBuilder;>;" };
-  static const J2ObjcClassInfo _ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder = { "AbsoluteLayoutCommandParamsBuilder", "com.ashera.absolutelayout", ptrTable, methods, NULL, 7, 0x1, 7, 0, 0, -1, -1, 4, -1 };
-  return &_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;
+  static const void *ptrTable[] = { "LComAsheraAbsolutelayoutAbsoluteLayoutImpl;", "setLayoutX", "LNSString;", "setLayoutY", "Lcom/ashera/layout/ViewGroupImpl$ViewGroupCommandParamsBuilder<Lcom/ashera/absolutelayout/AbsoluteLayoutImpl$AbsoluteLayoutCommandParamsBuilder;>;" };
+  static const J2ObjcClassInfo _ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder = { "AbsoluteLayoutCommandParamsBuilder", "com.ashera.absolutelayout", ptrTable, methods, NULL, 7, 0x1, 7, 0, 0, -1, -1, 4, -1 };
+  return &_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder;
 }
 
 @end
 
-void ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *self, ASAbsoluteLayoutImpl *outer$) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *self, ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
   ASViewGroupImpl_ViewGroupCommandParamsBuilder_init(self);
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *new_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *create_ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithASAbsoluteLayoutImpl_(ASAbsoluteLayoutImpl *outer$) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder, initWithASAbsoluteLayoutImpl_, outer$)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder_initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl *outer$) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder, initWithComAsheraAbsolutelayoutAbsoluteLayoutImpl_, outer$)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_AbsoluteLayoutCommandParamsBuilder)
 
-@implementation ASAbsoluteLayoutImpl_$Lambda$1
+@implementation ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1
 
 - (void)run {
   ASViewGroupImpl_nativeRemoveViewWithASIWidget_(val$widget_);
@@ -1147,15 +1156,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutImpl_AbsoluteLayoutCommandParam
 
 @end
 
-void ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(ASAbsoluteLayoutImpl_$Lambda$1 *self, id<ASIWidget> capture$0) {
+void ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 *self, id<ASIWidget> capture$0) {
   self->val$widget_ = capture$0;
   NSObject_init(self);
 }
 
-ASAbsoluteLayoutImpl_$Lambda$1 *new_ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0) {
-  J2OBJC_NEW_IMPL(ASAbsoluteLayoutImpl_$Lambda$1, initWithASIWidget_, capture$0)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 *new_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0) {
+  J2OBJC_NEW_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1, initWithASIWidget_, capture$0)
 }
 
-ASAbsoluteLayoutImpl_$Lambda$1 *create_ASAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0) {
-  J2OBJC_CREATE_IMPL(ASAbsoluteLayoutImpl_$Lambda$1, initWithASIWidget_, capture$0)
+ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1 *create_ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1_initWithASIWidget_(id<ASIWidget> capture$0) {
+  J2OBJC_CREATE_IMPL(ComAsheraAbsolutelayoutAbsoluteLayoutImpl_$Lambda$1, initWithASIWidget_, capture$0)
 }
