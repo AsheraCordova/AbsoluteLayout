@@ -104,7 +104,7 @@ Context context = (Context) fragment.getRootActivity();
 	}
 
 	@Override
-	public boolean remove(IWidget w) {		
+	public boolean remove(IWidget w) {
 		boolean remove = super.remove(w);
 		absoluteLayout.removeView((View) w.asWidget());
 		return remove;
@@ -363,7 +363,9 @@ return layoutParams.y;			}
         @Override
         public void drawableStateChanged() {
         	super.drawableStateChanged();
-        	ViewImpl.drawableStateChanged(AbsoluteLayoutImpl.this);
+        	if (!isWidgetDisposed()) {
+        		ViewImpl.drawableStateChanged(AbsoluteLayoutImpl.this);
+        	}
         }
         
     	public void setState0(float value) {
@@ -501,6 +503,7 @@ return layoutParams.y;			}
         	ViewImpl.stateNo(AbsoluteLayoutImpl.this);
         }
      
+	
 	}
 	@Override
 	public Class getViewClass() {
