@@ -76,6 +76,7 @@ public class AbsoluteLayoutImpl extends BaseHasWidgets {
 		
 		ViewGroupImpl.registerCommandConveter(this);
 		setWidgetOnNativeClass();
+		
 	}
 	private native void setWidgetOnNativeClass() /*-[
 		((ASUIView*) [self asNativeWidget]).widget = self;
@@ -469,7 +470,7 @@ return layoutParams.y;			}
 	@SuppressLint("NewApi")
 	@Override
 	public void setAttribute(WidgetAttribute key, String strValue, Object objValue, ILifeCycleDecorator decorator) {
-				ViewGroupImpl.setAttribute(this, key, strValue, objValue, decorator);
+				ViewGroupImpl.setAttribute(this,  key, strValue, objValue, decorator);
 		Object nativeWidget = asNativeWidget();
 
 	}
@@ -529,141 +530,5 @@ return layoutParams.y;			}
         ((View)asWidget()).setVisibility(b ? View.VISIBLE : View.GONE);
     }
 
-	
-private AbsoluteLayoutCommandBuilder builder;
-private AbsoluteLayoutBean bean;
-public Object getPlugin(String plugin) {
-	return WidgetFactory.getAttributable(plugin).newInstance(this);
-}
-public AbsoluteLayoutBean getBean() {
-	if (bean == null) {
-		bean = new AbsoluteLayoutBean();
-	}
-	return bean;
-}
-public AbsoluteLayoutCommandBuilder getBuilder() {
-	if (builder == null) {
-		builder = new AbsoluteLayoutCommandBuilder();
-	}
-	return builder;
-}
-
-
-public  class AbsoluteLayoutCommandBuilder extends com.ashera.layout.ViewGroupImpl.ViewGroupCommandBuilder <AbsoluteLayoutCommandBuilder> {
-    public AbsoluteLayoutCommandBuilder() {
-	}
-	
-	public AbsoluteLayoutCommandBuilder execute(boolean setter) {
-		if (setter) {
-			executeCommand(command, null, IWidget.COMMAND_EXEC_SETTER_METHOD);
-			getFragment().remeasure();
-		}
-		executeCommand(command, null, IWidget.COMMAND_EXEC_GETTER_METHOD);
-return this;	}
-
-}
-public class AbsoluteLayoutBean extends com.ashera.layout.ViewGroupImpl.ViewGroupBean{
-		public AbsoluteLayoutBean() {
-			super(AbsoluteLayoutImpl.this);
-		}
-}
-
-
-private AbsoluteLayoutCommandParamsBuilder paramsBuilder;
-private AbsoluteLayoutParamsBean paramsBean;
-
-public AbsoluteLayoutParamsBean getParamsBean() {
-	if (paramsBean == null) {
-		paramsBean = new AbsoluteLayoutParamsBean();
-	}
-	return paramsBean;
-}
-public AbsoluteLayoutCommandParamsBuilder getParamsBuilder() {
-	if (paramsBuilder == null) {
-		paramsBuilder = new AbsoluteLayoutCommandParamsBuilder();
-	}
-	return paramsBuilder;
-}
-
-
-
-public class AbsoluteLayoutParamsBean extends com.ashera.layout.ViewGroupImpl.ViewGroupParamsBean{
-public Object getLayoutX(IWidget w) {
-	java.util.Map<String, Object> layoutParams = new java.util.HashMap<String, Object>();
-	java.util.Map<String, Object> command = getParamsBuilder().reset().tryGetLayoutX().getCommand();
-	
-	layoutParams.put("layoutParams", command);
-	w.executeCommand(layoutParams, null, COMMAND_EXEC_GETTER_METHOD); 
-	return getParamsBuilder().getLayoutX();
-}
-public void setLayoutX(IWidget w, String value) {
-	java.util.Map<String, Object> layoutParams = new java.util.HashMap<String, Object>();
-	layoutParams.put("layoutParams", getParamsBuilder().reset().setLayoutX(value).getCommand());
-	w.executeCommand(layoutParams, null, COMMAND_EXEC_SETTER_METHOD);
-	w.getFragment().remeasure();
-}
-
-public Object getLayoutY(IWidget w) {
-	java.util.Map<String, Object> layoutParams = new java.util.HashMap<String, Object>();
-	java.util.Map<String, Object> command = getParamsBuilder().reset().tryGetLayoutY().getCommand();
-	
-	layoutParams.put("layoutParams", command);
-	w.executeCommand(layoutParams, null, COMMAND_EXEC_GETTER_METHOD); 
-	return getParamsBuilder().getLayoutY();
-}
-public void setLayoutY(IWidget w, String value) {
-	java.util.Map<String, Object> layoutParams = new java.util.HashMap<String, Object>();
-	layoutParams.put("layoutParams", getParamsBuilder().reset().setLayoutY(value).getCommand());
-	w.executeCommand(layoutParams, null, COMMAND_EXEC_SETTER_METHOD);
-	w.getFragment().remeasure();
-}
-
-}
-
-
-
-
-
-public class AbsoluteLayoutCommandParamsBuilder extends com.ashera.layout.ViewGroupImpl.ViewGroupCommandParamsBuilder<AbsoluteLayoutCommandParamsBuilder>{
-public AbsoluteLayoutCommandParamsBuilder tryGetLayoutX() {
-	Map<String, Object> attrs = initCommand("layout_x");
-	attrs.put("type", "attribute");
-	attrs.put("getter", true);
-	attrs.put("orderGet", ++orderGet);
-return this;}
-
-public Object getLayoutX() {
-	Map<String, Object> attrs = initCommand("layout_x");
-	return attrs.get("commandReturnValue");
-}
-public AbsoluteLayoutCommandParamsBuilder setLayoutX(String value) {
-	Map<String, Object> attrs = initCommand("layout_x");
-	attrs.put("type", "attribute");
-	attrs.put("setter", true);
-	attrs.put("orderSet", ++orderSet);
-
-	attrs.put("value", value);
-return this;}
-public AbsoluteLayoutCommandParamsBuilder tryGetLayoutY() {
-	Map<String, Object> attrs = initCommand("layout_y");
-	attrs.put("type", "attribute");
-	attrs.put("getter", true);
-	attrs.put("orderGet", ++orderGet);
-return this;}
-
-public Object getLayoutY() {
-	Map<String, Object> attrs = initCommand("layout_y");
-	return attrs.get("commandReturnValue");
-}
-public AbsoluteLayoutCommandParamsBuilder setLayoutY(String value) {
-	Map<String, Object> attrs = initCommand("layout_y");
-	attrs.put("type", "attribute");
-	attrs.put("setter", true);
-	attrs.put("orderSet", ++orderSet);
-
-	attrs.put("value", value);
-return this;}
-}
-
-	//end - body
+		//end - body
 }
