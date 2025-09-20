@@ -3,11 +3,24 @@
 //  source: D:\Java\github_ashera\AbsoluteLayout\ios\src\main\java\r\android\widget\AbsoluteLayout.java
 //
 
+#define J2OBJC_IMPORTED_BY_JAVA_IMPLEMENTATION 1
+
+
+
+
 #include "AbsoluteLayout.h"
 #include "J2ObjC_source.h"
 #include "View.h"
 #include "ViewGroup.h"
+#include "java/lang/Boolean.h"
+#include "java/lang/Integer.h"
 #include "java/lang/Math.h"
+
+
+
+
+#pragma clang diagnostic error "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wswitch"
 
 
 @implementation ADAbsoluteLayout
@@ -19,17 +32,17 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (void)onMeasureWithInt:(jint)widthMeasureSpec
-                 withInt:(jint)heightMeasureSpec {
-  jint count = [self getChildCount];
-  jint maxHeight = 0;
-  jint maxWidth = 0;
+- (void)onMeasureWithInt:(int32_t)widthMeasureSpec
+                 withInt:(int32_t)heightMeasureSpec {
+  int32_t count = [self getChildCount];
+  int32_t maxHeight = 0;
+  int32_t maxWidth = 0;
   [self measureChildrenWithInt:widthMeasureSpec withInt:heightMeasureSpec];
-  for (jint i = 0; i < count; i++) {
+  for (int32_t i = 0; i < count; i++) {
     ADView *child = [self getChildAtWithInt:i];
     if ([((ADView *) nil_chk(child)) getVisibility] != ADView_GONE) {
-      jint childRight;
-      jint childBottom;
+      int32_t childRight;
+      int32_t childBottom;
       ADAbsoluteLayout_LayoutParams *lp = (ADAbsoluteLayout_LayoutParams *) cast_chk([child getLayoutParams], [ADAbsoluteLayout_LayoutParams class]);
       childRight = ((ADAbsoluteLayout_LayoutParams *) nil_chk(lp))->x_ + [child getMeasuredWidth];
       childBottom = lp->y_ + [child getMeasuredHeight];
@@ -48,24 +61,24 @@ J2OBJC_IGNORE_DESIGNATED_END
   return new_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(ADViewGroup_LayoutParams_WRAP_CONTENT, ADViewGroup_LayoutParams_WRAP_CONTENT, 0, 0);
 }
 
-- (void)onLayoutWithBoolean:(jboolean)changed
-                    withInt:(jint)l
-                    withInt:(jint)t
-                    withInt:(jint)r
-                    withInt:(jint)b {
-  jint count = [self getChildCount];
-  for (jint i = 0; i < count; i++) {
+- (void)onLayoutWithBoolean:(bool)changed
+                    withInt:(int32_t)l
+                    withInt:(int32_t)t
+                    withInt:(int32_t)r
+                    withInt:(int32_t)b {
+  int32_t count = [self getChildCount];
+  for (int32_t i = 0; i < count; i++) {
     ADView *child = [self getChildAtWithInt:i];
     if ([((ADView *) nil_chk(child)) getVisibility] != ADView_GONE) {
       ADAbsoluteLayout_LayoutParams *lp = (ADAbsoluteLayout_LayoutParams *) cast_chk([child getLayoutParams], [ADAbsoluteLayout_LayoutParams class]);
-      jint childLeft = mPaddingLeft_ + ((ADAbsoluteLayout_LayoutParams *) nil_chk(lp))->x_;
-      jint childTop = mPaddingTop_ + lp->y_;
+      int32_t childLeft = mPaddingLeft_ + ((ADAbsoluteLayout_LayoutParams *) nil_chk(lp))->x_;
+      int32_t childTop = mPaddingTop_ + lp->y_;
       [child layoutWithInt:childLeft withInt:childTop withInt:childLeft + [child getMeasuredWidth] withInt:childTop + [child getMeasuredHeight]];
     }
   }
 }
 
-- (jboolean)checkLayoutParamsWithADViewGroup_LayoutParams:(ADViewGroup_LayoutParams *)p {
+- (bool)checkLayoutParamsWithADViewGroup_LayoutParams:(ADViewGroup_LayoutParams *)p {
   return [p isKindOfClass:[ADAbsoluteLayout_LayoutParams class]];
 }
 
@@ -107,12 +120,14 @@ ADAbsoluteLayout *create_ADAbsoluteLayout_init() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ADAbsoluteLayout)
 
+J2OBJC_NAME_MAPPING(ADAbsoluteLayout, "r.android.widget", "AD")
+
 @implementation ADAbsoluteLayout_LayoutParams
 
-- (instancetype)initWithInt:(jint)width
-                    withInt:(jint)height
-                    withInt:(jint)x
-                    withInt:(jint)y {
+- (instancetype)initWithInt:(int32_t)width
+                    withInt:(int32_t)height
+                    withInt:(int32_t)x
+                    withInt:(int32_t)y {
   ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(self, width, height, x, y);
   return self;
 }
@@ -144,17 +159,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ADAbsoluteLayout)
 
 @end
 
-void ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(ADAbsoluteLayout_LayoutParams *self, jint width, jint height, jint x, jint y) {
+void ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(ADAbsoluteLayout_LayoutParams *self, int32_t width, int32_t height, int32_t x, int32_t y) {
   ADViewGroup_LayoutParams_initWithInt_withInt_(self, width, height);
   self->x_ = x;
   self->y_ = y;
 }
 
-ADAbsoluteLayout_LayoutParams *new_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(jint width, jint height, jint x, jint y) {
+ADAbsoluteLayout_LayoutParams *new_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(int32_t width, int32_t height, int32_t x, int32_t y) {
   J2OBJC_NEW_IMPL(ADAbsoluteLayout_LayoutParams, initWithInt_withInt_withInt_withInt_, width, height, x, y)
 }
 
-ADAbsoluteLayout_LayoutParams *create_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(jint width, jint height, jint x, jint y) {
+ADAbsoluteLayout_LayoutParams *create_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(int32_t width, int32_t height, int32_t x, int32_t y) {
   J2OBJC_CREATE_IMPL(ADAbsoluteLayout_LayoutParams, initWithInt_withInt_withInt_withInt_, width, height, x, y)
 }
 

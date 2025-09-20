@@ -3,10 +3,21 @@
 //  source: D:\Java\github_ashera\AbsoluteLayout\ios\src\main\java\com\ashera\absolutelayout\AbsoluteLayoutPlugin.java
 //
 
+#define J2OBJC_IMPORTED_BY_JAVA_IMPLEMENTATION 1
+
+
+
+
 #include "AbsoluteLayoutImpl.h"
 #include "AbsoluteLayoutPlugin.h"
 #include "J2ObjC_source.h"
 #include "WidgetFactory.h"
+
+
+
+
+#pragma clang diagnostic error "-Wreturn-type"
+#pragma clang diagnostic ignored "-Wswitch"
 
 
 @implementation ASAbsoluteLayoutPlugin
@@ -57,3 +68,5 @@ void ASAbsoluteLayoutPlugin_initPlugin() {
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ASAbsoluteLayoutPlugin)
+
+J2OBJC_NAME_MAPPING(ASAbsoluteLayoutPlugin, "com.ashera.absolutelayout", "AS")

@@ -3,6 +3,7 @@
 //  source: D:\Java\github_ashera\AbsoluteLayout\ios\src\main\java\com\ashera\absolutelayout\AbsoluteLayoutPlugin.java
 //
 
+#import <Foundation/Foundation.h>
 #include "J2ObjC_header.h"
 
 #pragma push_macro("INCLUDE_ALL_AbsoluteLayoutPlugin")
@@ -39,6 +40,7 @@ FOUNDATION_EXPORT void ASAbsoluteLayoutPlugin_initPlugin(void);
 J2OBJC_TYPE_LITERAL_HEADER(ASAbsoluteLayoutPlugin)
 
 @compatibility_alias ComAsheraAbsolutelayoutAbsoluteLayoutPlugin ASAbsoluteLayoutPlugin;
+
 
 #endif
 

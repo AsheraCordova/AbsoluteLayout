@@ -3,6 +3,7 @@
 //  source: D:\Java\github_ashera\AbsoluteLayout\ios\src\main\java\r\android\widget\AbsoluteLayout.java
 //
 
+#import <Foundation/Foundation.h>
 #include "J2ObjC_header.h"
 
 #pragma push_macro("INCLUDE_ALL_AbsoluteLayout")
@@ -21,6 +22,8 @@
 #include "ViewGroup.h"
 
 @class ADViewGroup_LayoutParams;
+@class JavaLangBoolean;
+@class JavaLangInteger;
 
 @interface ADAbsoluteLayout : ADViewGroup
 
@@ -30,18 +33,18 @@
 
 #pragma mark Protected
 
-- (jboolean)checkLayoutParamsWithADViewGroup_LayoutParams:(ADViewGroup_LayoutParams *)p;
+- (bool)checkLayoutParamsWithADViewGroup_LayoutParams:(ADViewGroup_LayoutParams *)p;
 
 - (ADViewGroup_LayoutParams *)generateDefaultLayoutParams;
 
-- (void)onLayoutWithBoolean:(jboolean)changed
-                    withInt:(jint)l
-                    withInt:(jint)t
-                    withInt:(jint)r
-                    withInt:(jint)b;
+- (void)onLayoutWithBoolean:(bool)changed
+                    withInt:(int32_t)l
+                    withInt:(int32_t)t
+                    withInt:(int32_t)r
+                    withInt:(int32_t)b;
 
-- (void)onMeasureWithInt:(jint)widthMeasureSpec
-                 withInt:(jint)heightMeasureSpec;
+- (void)onMeasureWithInt:(int32_t)widthMeasureSpec
+                 withInt:(int32_t)heightMeasureSpec;
 
 @end
 
@@ -57,6 +60,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ADAbsoluteLayout)
 
 @compatibility_alias RAndroidWidgetAbsoluteLayout ADAbsoluteLayout;
 
+
 #endif
 
 #if !defined (ADAbsoluteLayout_LayoutParams_) && (INCLUDE_ALL_AbsoluteLayout || defined(INCLUDE_ADAbsoluteLayout_LayoutParams))
@@ -66,18 +70,20 @@ J2OBJC_TYPE_LITERAL_HEADER(ADAbsoluteLayout)
 #define INCLUDE_ADViewGroup_LayoutParams 1
 #include "ViewGroup.h"
 
+@class JavaLangInteger;
+
 @interface ADAbsoluteLayout_LayoutParams : ADViewGroup_LayoutParams {
  @public
-  jint x_;
-  jint y_;
+  int32_t x_;
+  int32_t y_;
 }
 
 #pragma mark Public
 
-- (instancetype)initWithInt:(jint)width
-                    withInt:(jint)height
-                    withInt:(jint)x
-                    withInt:(jint)y;
+- (instancetype)initWithInt:(int32_t)width
+                    withInt:(int32_t)height
+                    withInt:(int32_t)x
+                    withInt:(int32_t)y;
 
 - (instancetype)initWithADViewGroup_LayoutParams:(ADViewGroup_LayoutParams *)source;
 
@@ -85,18 +91,18 @@ J2OBJC_TYPE_LITERAL_HEADER(ADAbsoluteLayout)
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithInt:(jint)arg0
-                    withInt:(jint)arg1 NS_UNAVAILABLE;
+- (instancetype)initWithInt:(int32_t)arg0
+                    withInt:(int32_t)arg1 NS_UNAVAILABLE;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ADAbsoluteLayout_LayoutParams)
 
-FOUNDATION_EXPORT void ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(ADAbsoluteLayout_LayoutParams *self, jint width, jint height, jint x, jint y);
+FOUNDATION_EXPORT void ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(ADAbsoluteLayout_LayoutParams *self, int32_t width, int32_t height, int32_t x, int32_t y);
 
-FOUNDATION_EXPORT ADAbsoluteLayout_LayoutParams *new_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(jint width, jint height, jint x, jint y) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT ADAbsoluteLayout_LayoutParams *new_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(int32_t width, int32_t height, int32_t x, int32_t y) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ADAbsoluteLayout_LayoutParams *create_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(jint width, jint height, jint x, jint y);
+FOUNDATION_EXPORT ADAbsoluteLayout_LayoutParams *create_ADAbsoluteLayout_LayoutParams_initWithInt_withInt_withInt_withInt_(int32_t width, int32_t height, int32_t x, int32_t y);
 
 FOUNDATION_EXPORT void ADAbsoluteLayout_LayoutParams_initWithADViewGroup_LayoutParams_(ADAbsoluteLayout_LayoutParams *self, ADViewGroup_LayoutParams *source);
 
@@ -105,6 +111,7 @@ FOUNDATION_EXPORT ADAbsoluteLayout_LayoutParams *new_ADAbsoluteLayout_LayoutPara
 FOUNDATION_EXPORT ADAbsoluteLayout_LayoutParams *create_ADAbsoluteLayout_LayoutParams_initWithADViewGroup_LayoutParams_(ADViewGroup_LayoutParams *source);
 
 J2OBJC_TYPE_LITERAL_HEADER(ADAbsoluteLayout_LayoutParams)
+
 
 #endif
 
@@ -134,6 +141,7 @@ FOUNDATION_EXPORT ADAbsoluteLayout_AbsoulteLayout *new_ADAbsoluteLayout_Absoulte
 FOUNDATION_EXPORT ADAbsoluteLayout_AbsoulteLayout *create_ADAbsoluteLayout_AbsoulteLayout_initWithADAbsoluteLayout_(ADAbsoluteLayout *outer$);
 
 J2OBJC_TYPE_LITERAL_HEADER(ADAbsoluteLayout_AbsoulteLayout)
+
 
 #endif
 
