@@ -488,7 +488,7 @@ return layoutParams.y;			}
     }
     private void nativeCreate(Map<String, Object> params) {
         pane = new org.eclipse.swt.widgets.Composite((org.eclipse.swt.widgets.Composite)ViewImpl.getParent(this), getStyle(params, fragment));
-        ((org.eclipse.swt.widgets.Composite)pane).setLayout(new org.eclipse.nebula.widgets.layout.AbsoluteLayout());
+        ((org.eclipse.swt.widgets.Composite)pane).setLayout(new com.ashera.common.AbsoluteLayout());
     }
     public boolean isWidgetDisposed() {
 		return ((org.eclipse.swt.widgets.Control) pane).isDisposed();

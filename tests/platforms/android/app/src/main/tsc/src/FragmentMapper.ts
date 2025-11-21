@@ -133,8 +133,6 @@ import StyledLabelSwtActivity from './StyledLabelSwtActivity';
 import StyledTextSwtActivity from './StyledTextSwtActivity';
 import RadioButtonStyledLabelSwtActivity from './RadioButtonStyledLabelSwtActivity';
 import CheckBoxStyledLabelSwtActivity from './CheckBoxStyledLabelSwtActivity';
-import SwitchSwtActivity from './SwitchSwtActivity';
-import SwitchStyledLabelSwtActivity from './SwitchStyledLabelSwtActivity';
 import ProgressBarAndroidActivity from './ProgressBarAndroidActivity';
 import ProgressBarSwtActivity from './ProgressBarSwtActivity';
 import ProgressBarWebActivity from './ProgressBarWebActivity';
@@ -148,6 +146,10 @@ import AutoCompleteTextViewAndroidActivity from './AutoCompleteTextViewAndroidAc
 import AutoCompleteTextViewSwtActivity from './AutoCompleteTextViewSwtActivity';
 import AutoCompleteTextViewWebActivity from './AutoCompleteTextViewWebActivity';
 import AutoCompleteTextViewIosActivity from './AutoCompleteTextViewIosActivity';
+import RatingBarAndroidActivity from './RatingBarAndroidActivity';
+import RatingBarSwtActivity from './RatingBarSwtActivity';
+import RatingBarWebActivity from './RatingBarWebActivity';
+import RatingBarIosActivity from './RatingBarIosActivity';
 import AbsoluteLayoutAndroidActivity from './AbsoluteLayoutAndroidActivity';
 import AbsoluteLayoutSwtActivity from './AbsoluteLayoutSwtActivity';
 import AbsoluteLayoutIosActivity from './AbsoluteLayoutIosActivity';
@@ -295,8 +297,6 @@ export const fragmentMapper : any = {
 	'layout/styledtextswt_test.xml': StyledTextSwtActivity,
 	'layout/radiobuttonstyledlabelswt_test.xml': RadioButtonStyledLabelSwtActivity,
 	'layout/checkboxstyledlabelswt_test.xml': CheckBoxStyledLabelSwtActivity,
-	'layout/switchswt_test.xml': SwitchSwtActivity,
-	'layout/switchstyledlabelswt_test.xml': SwitchStyledLabelSwtActivity,
 	'layout/progressbarandroid_test.xml': ProgressBarAndroidActivity,
 	'layout/progressbarswt_test.xml': ProgressBarSwtActivity,
 	'layout/progressbarweb_test.xml': ProgressBarWebActivity,
@@ -310,6 +310,10 @@ export const fragmentMapper : any = {
 	'layout/autocompletetextviewswt_test.xml': AutoCompleteTextViewSwtActivity,
 	'layout/autocompletetextviewweb_test.xml': AutoCompleteTextViewWebActivity,
 	'layout/autocompletetextviewios_test.xml': AutoCompleteTextViewIosActivity,
+	'layout/ratingbarandroid_test.xml': RatingBarAndroidActivity,
+	'layout/ratingbarswt_test.xml': RatingBarSwtActivity,
+	'layout/ratingbarweb_test.xml': RatingBarWebActivity,
+	'layout/ratingbarios_test.xml': RatingBarIosActivity,
 	'layout/absolutelayoutandroid_test.xml': AbsoluteLayoutAndroidActivity,
 	'layout/absolutelayoutswt_test.xml': AbsoluteLayoutSwtActivity,
 	'layout/absolutelayoutios_test.xml': AbsoluteLayoutIosActivity,
