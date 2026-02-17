@@ -178,6 +178,10 @@ export default class HomeActivity extends Activity{
 				{"id": "RatingBarSwtActivity","name" : "RatingBarSwtActivity"},
 				{"id": "RatingBarWebActivity","name" : "RatingBarWebActivity"},
 				{"id": "RatingBarIosActivity","name" : "RatingBarIosActivity"},
+				{"id": "VideoViewAndroidActivity","name" : "VideoViewAndroidActivity"},
+				{"id": "VideoViewSwtActivity","name" : "VideoViewSwtActivity"},
+				{"id": "VideoViewWebActivity","name" : "VideoViewWebActivity"},
+				{"id": "VideoViewIosActivity","name" : "VideoViewIosActivity"},
 				{"id": "AbsoluteLayoutAndroidActivity","name" : "AbsoluteLayoutAndroidActivity"},
 				{"id": "AbsoluteLayoutSwtActivity","name" : "AbsoluteLayoutSwtActivity"},
 				{"id": "AbsoluteLayoutIosActivity","name" : "AbsoluteLayoutIosActivity"},
@@ -1513,6 +1517,42 @@ export default class HomeActivity extends Activity{
 				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
 			}
         	await this.navController.reset().navigate("fragment#framelayout#layout/ratingbarios_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'VideoViewAndroidActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/videoviewandroid_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'VideoViewSwtActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/videoviewswt_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'VideoViewWebActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/videoviewweb_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
+    	}	
+		else if (obj.id == 'VideoViewIosActivity') {
+			let list = [];
+			let images = ["@drawable/bryce_canyon", "@drawable/cathedral_rock", "@drawable/death_valley", "@drawable/fitzgerald_marine_reserve", "@drawable/goldengate", "@drawable/golden_gate_bridge", "@drawable/shipwreck_1", "@drawable/shipwreck_2", "@drawable/grand_canyon", "@drawable/horseshoe_bend", "@drawable/muir_beach", "@drawable/rainbow_falls"];
+			var colors = [ ("#9C4B8F"), ("#945693"), ("#8C6096"), ("#846B9A"), ("#7C769E"), ("#7480A2"), ("#6D8BA5"), ("#6595A9"), ("#5DA0AD"), ("#55ABB1"), ("#4DB5B4"), ("#45C0B8")];
+			for(let i=0; i<10;i++) {
+				list.push({"id":i, "name": i + "", "background": (i % 2) == 0 ? "#ff0" : "#f00", "src" : images[i], "mybackground": colors[i]});
+			}
+        	await this.navController.reset().navigate("fragment#framelayout#layout/videoviewios_test.xml", "testObj->view as pathmap", {"testObj": {"emailIntent": "ram@a.com", "passwordIntent": "b.com"}, looptest: {textlayout: [{"sectionName":"test123"}, {"id":1, "a": "1"}, {"id":2, "a": "2"}]}, "viewpagers": list}).executeCommand();
     	}	
 		else if (obj.id == 'AbsoluteLayoutAndroidActivity') {
 			let list = [];

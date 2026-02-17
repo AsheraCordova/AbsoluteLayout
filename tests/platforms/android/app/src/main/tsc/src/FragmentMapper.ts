@@ -150,6 +150,10 @@ import RatingBarAndroidActivity from './RatingBarAndroidActivity';
 import RatingBarSwtActivity from './RatingBarSwtActivity';
 import RatingBarWebActivity from './RatingBarWebActivity';
 import RatingBarIosActivity from './RatingBarIosActivity';
+import VideoViewAndroidActivity from './VideoViewAndroidActivity';
+import VideoViewSwtActivity from './VideoViewSwtActivity';
+import VideoViewWebActivity from './VideoViewWebActivity';
+import VideoViewIosActivity from './VideoViewIosActivity';
 import AbsoluteLayoutAndroidActivity from './AbsoluteLayoutAndroidActivity';
 import AbsoluteLayoutSwtActivity from './AbsoluteLayoutSwtActivity';
 import AbsoluteLayoutIosActivity from './AbsoluteLayoutIosActivity';
@@ -314,6 +318,10 @@ export const fragmentMapper : any = {
 	'layout/ratingbarswt_test.xml': RatingBarSwtActivity,
 	'layout/ratingbarweb_test.xml': RatingBarWebActivity,
 	'layout/ratingbarios_test.xml': RatingBarIosActivity,
+	'layout/videoviewandroid_test.xml': VideoViewAndroidActivity,
+	'layout/videoviewswt_test.xml': VideoViewSwtActivity,
+	'layout/videoviewweb_test.xml': VideoViewWebActivity,
+	'layout/videoviewios_test.xml': VideoViewIosActivity,
 	'layout/absolutelayoutandroid_test.xml': AbsoluteLayoutAndroidActivity,
 	'layout/absolutelayoutswt_test.xml': AbsoluteLayoutSwtActivity,
 	'layout/absolutelayoutios_test.xml': AbsoluteLayoutIosActivity,
