@@ -151,6 +151,10 @@ import RatingBarSwtActivity from './RatingBarSwtActivity';
 import RatingBarWebActivity from './RatingBarWebActivity';
 import RatingBarIosActivity from './RatingBarIosActivity';
 import VideoViewAndroidActivity from './VideoViewAndroidActivity';
+import AudioViewAndroidActivity from './AudioViewAndroidActivity';
+import AudioViewSwtActivity from './AudioViewSwtActivity';
+import AudioViewWebActivity from './AudioViewWebActivity';
+import AudioViewIosActivity from './AudioViewIosActivity';
 import VideoViewSwtActivity from './VideoViewSwtActivity';
 import VideoViewWebActivity from './VideoViewWebActivity';
 import VideoViewIosActivity from './VideoViewIosActivity';
@@ -319,6 +323,10 @@ export const fragmentMapper : any = {
 	'layout/ratingbarweb_test.xml': RatingBarWebActivity,
 	'layout/ratingbarios_test.xml': RatingBarIosActivity,
 	'layout/videoviewandroid_test.xml': VideoViewAndroidActivity,
+	'layout/audioviewandroid_test.xml': AudioViewAndroidActivity,
+	'layout/audioviewswt_test.xml': AudioViewSwtActivity,
+	'layout/audioviewweb_test.xml': AudioViewWebActivity,
+	'layout/audioviewios_test.xml': AudioViewIosActivity,
 	'layout/videoviewswt_test.xml': VideoViewSwtActivity,
 	'layout/videoviewweb_test.xml': VideoViewWebActivity,
 	'layout/videoviewios_test.xml': VideoViewIosActivity,
